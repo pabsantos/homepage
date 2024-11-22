@@ -1,0 +1,37 @@
+/*-- scss:defaults --*/
+
+// $link-decoration: underline;
+// $link-hover-color: white;
+
+
+/*-- scss:rules --*/
+.navbar .nav-link:hover {
+    color: white;
+    background-color: black;
+}
+
+.navbar .nav-link.active{
+    color: white !important;
+    background-color: black;
+}
+
+.navbar .nav-link.focus{
+    color: white !important;
+}
+
+.table.quarto-listing-table a{
+    color: black;
+    text-decoration: underline;
+}
+
+.table.quarto-listing-table a:hover {
+    color: white;
+    background-color: black;
+    padding: 1px;
+}
+
+
+
+// .navbar .nav-link{
+//     border-radius: 10px;
+// }

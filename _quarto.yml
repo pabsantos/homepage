@@ -1,0 +1,37 @@
+project:
+  type: website
+
+website:
+  title: ""
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - projetos.qmd
+      - publicacoes.qmd
+      - eventos.qmd
+      - midia.qmd
+    tools:
+      - icon: github
+        href: https://github.com/pabsantos/homepage
+    background: "white"
+    foreground: "black"
+  page-footer:
+    left:
+      - Licenciado sob CC BY-NC 4.0, pabsantos (2024)
+    right:
+      - Desenvolvido com Quarto
+
+
+format:
+  html:
+    theme: [cosmo, styles.scss]
+    toc: true
+    mainfont: monospace
+    backgroundcolor: "white"
+    fontcolor: "black"
+    linkcolor: "grey"
+    lang: pt-BR
+
+
+

@@ -1,0 +1,10 @@
+---
+title: "Publicações"
+listing:
+  type: table
+  contents: publicacoes.yml
+  sort-ui: false
+  filter-ui: false
+---
+
+Publicações acadêmicas em periódicos e congressos.
