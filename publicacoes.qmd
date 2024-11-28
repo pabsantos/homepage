@@ -1,10 +1,13 @@
 ---
 title: "Publicações"
 listing:
-  type: table
+  type: grid
   contents: publicacoes.yml
+  #image-height: 200px
   sort-ui: false
   filter-ui: false
+  sort:
+    - "date desc"
 ---
 
 Publicações acadêmicas em periódicos e congressos.

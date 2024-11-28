@@ -1,5 +1,12 @@
 ---
 title: Mídia
+listing:
+  type: table
+  contents: midia.yml
+  sort-ui: false
+  filter-ui: false
+  sort:
+    - "date desc"
 ---
 
-{{< lipsum 2 >}}
+Participações em reportagens de TV, rádio, jornais e revistas.

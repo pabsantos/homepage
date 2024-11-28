@@ -1,4 +1,104 @@
-- title: "Artigo 1"
-  author: pabsantos
-  date: 2024-01-01
-  path: "https://google.com"
+- title: Velocidades inseguras em Curitiba-PR
+  date: 2024-11-06
+  path: https://proceedings.science/anpet-2024/trabalhos/velocidades-inseguras-em-curitiba-pr?lang=pt-br
+  image: img/pub_speed_2024.png
+
+- title: Estimation of time savings during speeding
+  date: 2024-11-06
+  path: https://proceedings.science/anpet-2024/trabalhos/estimation-of-time-savings-during-speeding?lang=pt-br
+  image: img/pub_time_savings.png
+
+- title: "Avaliação do conteúdo dos portais dos Departamentos Estaduais de Trânsito - Detrans"
+  date: 2020-11-26
+  path: "https://stpr.ufpr.br/wp-content/uploads/2021/02/Anais-STPR-2020-1.pdf"
+  image: img/pub_detran.png
+
+- title: Velocidades inseguras no entorno de unidades de saúde e escolas
+  date: 2024-10-16
+  path: https://www.onsv.org.br/source/files/originals/VELOCIDADES_INSEGURAS_NO_ENTORNO_DE_UNIDADES_DE_SAUDE-983340.pdf
+  image: img/pub_pluris_escolas.png
+
+- title: Velocidades inseguras e nível de renda em áreas urbanas - o caso de Cuririba
+  date: 2024-10-16
+  path: https://www.onsv.org.br/source/files/originals/VELOCIDADES_INSEGURAS_E_NIVEL_DE_RENDA_EM_AREAS_URBANAS-349012.pdf
+  image: img/pub_pluris_renda.png
+
+- title: Indicadores da segurança viária no cenário brasileiro
+  date: 2023-11-07
+  path: https://proceedings.science/anpet-2023/trabalhos/indicadores-do-desempenho-da-seguranca-viaria-no-cenario-brasileiro?lang=pt-br
+  image: img/pub_iris.png
+
+- title: Análise da completude dos dados no Registro Nacional de Acidentes e Estatísticas de Trânsito (Renaest)
+  date: 2023-12-04
+  path: https://riodetransportes.org.br/20rdt/trabalhos/trabalhos/AC-ET-049.pdf
+  image: img/pub_renaest.png
+
+- title: Estudo Naturalístico de Direção Brasileiro (NDS-BR) - da concepção aos primeiros resultados
+  date: 2023-11-08
+  path: https://proceedings.science/anpet-2023/trabalhos/estudo-naturalistico-de-direcao-brasileiro-nds-br-da-concepcao-aos-primeiros-res?lang=pt-br
+  image: img/pub_ndsbr.png
+
+- title: Excesso de velocidade na Área Calma de Curitiba (PR) - Análise dos fatores determinantes e estimativa de economia de tempo
+  date: 2023-11-08
+  path: https://proceedings.science/anpet/anpet-2023/trabalhos/excesso-de-velocidade-na-area-calma-de-curitiba-pr-analise-dos-fatores-determina?lang=pt-br
+  image: img/pub_areacalma.png
+
+- title: Análise do excesso de velocidade na Área Calma de Curitiba - PR
+  path: https://revistatecie.crea-pr.org.br/index.php/revista/article/view/932/639
+  date: 2023-02
+  image: img/pub_speeding_areacalma.png
+
+- title: Autocorrelação espacial do excesso de velocidade em Curitiba - PR
+  path: https://revistatecie.crea-pr.org.br/index.php/revista/article/view/934/641
+  date: 2023-02
+  image: img/pub_autocorr.png
+
+- title: Elaboração de um painel de visualização de dados naturalísticos de direção utilizando Power BI
+  path: https://stpr.ufpr.br/wp-content/uploads/2018/02/3º-STPR-4º-SATA-e-4º-URBANIDADE.pdf
+  date: 2022-10-03
+  image: img/pub_powerbi.png
+
+- title: Estabelecimento de metas de redução de mortes no trânsito nos municípios brasileiros
+  path: https://www.revistatransportes.org.br/anpet/article/view/2704/976
+  date: 2022-10-25
+  image: img/pub_pca.png
+
+- title: NDSBR - um pacote em linguagem R para análise de dados naturalísticos
+  path: https://stpr.ufpr.br/wp-content/uploads/2018/02/3º-STPR-4º-SATA-e-4º-URBANIDADE.pdf
+  date: 2022-10-03
+  image: img/pub_pkg.png
+
+- title: Is organized carpooling safer? Speeding and distracted driving behaviors from a naturalistic driving study in Brazil
+  path: https://www.sciencedirect.com/science/article/abs/pii/S0001457521000233?via%3Dihub
+  date: 2021-03
+  image: img/pub_aap.png
+
+- title: Rodovias que Perdoam - Brasil (RQP-BR) - uma metodologia teórico-prática para a segurança viária
+  path: https://riodetransportes.org.br/xviii/anais/anais/AC-0421.pdf
+  date: 2021-12-08
+  image: img/pub_rqp.png
+
+- title: Plataforma de coleta de dados naturalísticos de segurança viária
+  date: 2020-11-16
+  path: https://www.researchgate.net/publication/356356265_Plataforma_de_Coleta_de_Dados_Naturalisticos_de_Seguranca_Viaria
+  image: img/pub_pcdn.png
+
+- title: Fatores determinantes para o excesso de velocidade em vias arteriais urbanas
+  date: 2020-11-26
+  image: img/pub_nds_arteriais.png
+  path: https://stpr.ufpr.br/wp-content/uploads/2021/02/Anais-STPR-2020-1.pdf
+  
+- title: Naturalistic driving study in Brazil - An snalysis of mobile phone use behavior while driving
+  date: 2020-09-03
+  image: img/pub_mpu.png
+  path: https://www.mdpi.com/1660-4601/17/17/6412
+
+- title: O Plano Nacional de Redução de Mortes e Lesões no Trânsito - o papel dos municípios
+  date: 2023-03-30
+  image: img/pub_pnatrans.png
+  path: https://www.onsv.org.br/pdi/livro-pnatrans-o-papel-dos-municipios
+
+- title: Desempenho Brasileiro da Década de Ação pela Segurança no Trânsito - Análise, Perspectivas e Indicadores
+  date: 2020-06-01
+  image: img/pub_decada.png
+  path: https://www.onsv.org.br/pdi/estudo-desempenho-brasileiro-na-decada-de-acao-pela-seguranca-no-transito?no-cache=1

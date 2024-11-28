@@ -21,16 +21,17 @@ website:
       - Licenciado sob CC BY-NC 4.0, pabsantos (2024)
     right:
       - Desenvolvido com Quarto
+  search: false
 
 
 format:
   html:
     theme: [cosmo, styles.scss]
-    toc: true
-    mainfont: monospace
+    toc: false
+    # mainfont: monospace
     backgroundcolor: "white"
     fontcolor: "black"
-    linkcolor: "grey"
+    linkcolor: "black"
     lang: pt-BR
 
 
