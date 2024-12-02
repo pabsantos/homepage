@@ -10,12 +10,19 @@ $pagination-active-border-color: white;
 $roboto-mono: 'Roboto Mono', monospace;
 
 $font-family-sans-serif: $roboto-mono;
+$transition-time: 0.2s;
 
 
 /*-- scss:rules --*/
 .navbar .nav-link:hover {
     color: white;
     background-color: black;
+    transition: $transition-time;
+}
+
+.navbar-brand:hover {
+    color: white;
+    transition: $transition-time;
 }
 
 .navbar .nav-link.active {
@@ -47,6 +54,7 @@ a:hover {
 div.quarto-about-trestles .about-link:hover {
     color: white !important;
     background-color: black !important;
+    transition: $transition-time;
 }
 
 div.quarto-about-trestles .about-entity .about-link {
@@ -76,6 +84,7 @@ div.quarto-about-trestles .about-entity .about-link {
 .navbar .quarto-navbar-tools .quarto-navigation-tool:hover {
     background-color: black;
     color: white;
+    transition: $transition-time;
 }
 
 .aa-DetachedCancelButton {
@@ -89,4 +98,15 @@ div.quarto-about-trestles .about-entity .about-link {
 
 .aa-DetachedContainer--modal {
     border-radius: 0px;
+}
+
+div.quarto-listing a:hover {
+    color: white;
+    transition: $transition-time;
+}
+
+.quarto-grid-item .card-title:hover {
+    background-color: black;
+    color: white;
+    transition: $transition-time;
 }

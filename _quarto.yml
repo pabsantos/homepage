@@ -1,15 +1,15 @@
 project:
   type: website
+  output-dir: docs
 
 website:
-  title: ""
+  title: "Pedro Borges"
   navbar:
     left:
       - href: index.qmd
         text: Home
-      - projetos.qmd
+      - blog.qmd
       - publicacoes.qmd
-      - eventos.qmd
       - midia.qmd
     tools:
       - icon: github

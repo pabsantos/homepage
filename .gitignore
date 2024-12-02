@@ -165,3 +165,4 @@ cython_debug/
 _site
 .vscode
 _freeze
+*_cache/

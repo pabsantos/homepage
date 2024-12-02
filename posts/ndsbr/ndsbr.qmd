@@ -1,0 +1,123 @@
+---
+title: "{ndsbr}"
+subtitle: Um pacote do R para análise de dados naturalísticos
+date: last-modified
+bibliography: refs.bib
+csl: apa.csl
+cap-location: margin
+execute:
+    warning: false
+    freeze: auto
+---
+
+## Introdução <img src="https://pabsantos.github.io/ndsbr/reference/figures/README-ndsbr.png" align="right" width="150" />
+
+O [{ndsbr}](https://pabsantos.github.io/ndsbr/){target="_blank"} foi criado para auxíliar as atividades do projeto de pesquisa [Estudo Naturalístico de Direção Brasileiro (NDS-BR)](https://tecnologia.ufpr.br/ceppur/estudo-naturalistico-de-direcao-brasileiro/){target="_blank"}, buscando estabelecer métodos ágeis e reproduzíveis de análise com base no R [@santosNDSBRUMPACOTE2023].
+
+## O que são dados naturalísticos de direção?
+
+São dados coletados através de um método observacional conhecido como estudo naturalístico de direção (NDS). Esse método permite a investigação do comportamento dos condutores de veículos automotores em condições reais, sem qualquer tipo de restrição ou estímulo. O NDS também permite a coleta de dados sobre as condições externas ao longo do percurso do indivíduo, através do registro de coordenadas geográficas, velocidade do veículo e outros fatores externos [@bastosESTUDONATURALISTICODIRECAO2023].
+
+## O Estudo Naturalístico de Direção Brasileiro
+
+O Estudo Naturalístico de Direção Brasileiro (NDS-BR) trata-se de uma iniciativa inédita no Brasil e tem por objetivo conhecer o comportamento dos condutores brasileiros a fim de orientar o planejamento de ações de segurança com foco sobre o fator humano e a engenharia viária. Em sua primeira fase, o estudo tem sido realizado em Curitiba e Região Metropolitana, com início em 2019.
+
+## Estrutura do pacote
+
+O ndsbr apresenta quatro categorias principais de funções: `nds_create`, `nds_calc`, `nds_join` e `nds_download`.
+
+As funções do `nds_create` são utilizadas para criar objetos sf, representando objetos espaciais com base nos dados naturatísticos:
+
+- `nds_create_points()`
+- `nds_create_lines()`
+
+As funções do `nds_calc` podem ser utilizadas para extrair informações da amostra, como tempo de viagem, distância percorrida e taxa de excesso de velocidade:
+
+- `nds_calc_dist()`
+- `nds_calc_time()`
+- `nds_calc_speeding()`
+
+As funções do `nds_join` realizam a junção espacial dos dados do NDS-BR com outros dados espaciais, como eixos de vias, polígonos dos bairros de Curitiba e dados sobre os limites de velocidade das vias
+
+- `nds_join_axis()`
+- `nds_join_neigh()`
+- `nds_join_spdlimit()`
+
+Por fim, `nds_load_data()` carrega a amostra de dados naturalísticos e as funções `nds_download_sf()` e `nds_download_cwb_osm()` auxiliam no download de dados espaciais necessários para o projeto. 
+
+## Utilizando o {ndsbr}
+
+Aqui contém uma aplicação rápida do {ndsbr} para verificar o perfil de velocidade de umas das viagens presentes na amostra. O primeiro passo é instalar o pacote. Ele não está hospedado no CRAN, assim é necessário instalar pelo {remotes} ou {pak}. Aqui também é carregado os pacotes {ggplot2} e {patchwork} para a visualização dos resultados.
+
+```{r}
+#| label: setup
+
+# pak::pak("pabsantos/ndsbr")
+library(ndsbr)
+library(ggplot2)
+library(patchwork)
+```
+
+A função `nds_load_data()` carrega os dados da amostra. O pacote já inclui uma amostra de demonstração. Para acessar, deve-se utilizar a função `system.file()` para extrair o caminho dos arquivos e depois inserir no `nds_load_data()`.
+
+```{r}
+#| label: load_ndsbr
+
+path <- system.file('extdata', package = "ndsbr")
+ndsbr_sample <- nds_load_data('driver', path)
+```
+
+Nesse exemplo foi considerado apenas os dados da viagem "A05". Como eu quero fazer um mapa da velocidade praticada, eu utilizo a função `nds_create_points()` para transformar o `tibble` em `sf`.
+
+```{r}
+#| label: arrange
+#| message: false
+#| output: false
+#| warning: false
+
+ndsbr_trip_a05 <- subset(ndsbr_sample, ID == "A05")
+sf_trip_a05 <- nds_create_points(ndsbr_trip_a05, x = "LONG", y = "LAT")
+```
+
+Também vai ser necessário os dados de vias de Curitiba para plotar o mapa. A função `nds_download_sf()` ajuda a fazer o download e carregar o objeto `sf` no projeto. 
+
+```{r}
+#| label: download_vias
+
+url_vias_cwb <- "https://ippuc.org.br/geodownloads/SHAPES_SIRGAS/EIXO_RUA_SIRGAS.zip"
+vias_cwb <- nds_download_sf(url_vias_cwb)
+```
+
+Por fim, com auxílio do {ggplot2} é possível visualizar a velocidade praticada no trajeto da viagem A05 e também o perfil de velocidade ao longo do tempo de viagem.
+
+```{r}
+#| label: fig-plot
+#| fig-cap: Perfil de velocidade da viagem A05
+
+theme_set(theme_bw(base_family = 'serif'))
+
+map <- ggplot() +
+    geom_sf(data = vias_cwb, color = "grey20", lwd = 0.1, alpha = 0.5) +
+    geom_sf(data = sf_trip_a05, aes(color = SPD_KMH)) +
+    theme(legend.position = 'none') +
+    scale_color_viridis_c()
+
+plot <- ggplot(sf_trip_a05, aes(x = TIME_ACUM, y = SPD_KMH, color = SPD_KMH)) +
+    geom_line() +
+    scale_color_viridis_c() +
+    labs(
+        x = "Tempo de viagem (s)",
+        y = "Velocidade (km/h)"
+    ) +
+    theme(legend.position = 'none')
+
+map | plot
+```
+
+## Conclusão
+
+O desenvolvimento do {ndsbr} ajudou nas atividades de pesquisa quantitativa dentro do projeto NDS-BR, padronizando e documentando os métodos que geralmente são mais utilizados pelos seus integrantes.
+
+No futuro eu também pretendo elaborar uma versão para o Python, auxiliando os pesquisadores que preferem essa linguagem em relação ao R.
+
+## Referências

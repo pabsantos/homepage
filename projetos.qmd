@@ -1,5 +1,0 @@
----
-title: "Projetos"
----
-
-{{< lipsum 2 >}}

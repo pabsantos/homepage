@@ -1,0 +1,107 @@
+[
+  {
+    "objectID": "blog.html",
+    "href": "blog.html",
+    "title": "Blog",
+    "section": "",
+    "text": "{ndsbr}\n\n\nUm pacote do R para análise de dados naturalísticos\n\n\n\n\n\n\n\n\n2 de dez. de 2024\n\n\n\n\n\n\nSem itens correspondentes"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Pedro Augusto Borges dos Santos",
+    "section": "",
+    "text": "Pesquisador e analista de dados com interesse na área de mobilidade urbana, incluindo analises quantitativas nos temas de segurança viária, uso do solo, padrões geográficos, transporte coletivo e macroacessibilidade. Utilizo métodos abertos e reproduzíveis na pesquisa científica, sempre priorizando a utilização de ferramentas opensource."
+  },
+  {
+    "objectID": "index.html#sobre-mim",
+    "href": "index.html#sobre-mim",
+    "title": "Pedro Augusto Borges dos Santos",
+    "section": "",
+    "text": "Pesquisador e analista de dados com interesse na área de mobilidade urbana, incluindo analises quantitativas nos temas de segurança viária, uso do solo, padrões geográficos, transporte coletivo e macroacessibilidade. Utilizo métodos abertos e reproduzíveis na pesquisa científica, sempre priorizando a utilização de ferramentas opensource."
+  },
+  {
+    "objectID": "index.html#habilidades",
+    "href": "index.html#habilidades",
+    "title": "Pedro Augusto Borges dos Santos",
+    "section": "Habilidades",
+    "text": "Habilidades\n\nProgramação\nCinco anos de experiência em análise de dados, ETL, automatização de relatórios, modelagem e criação de dashboards com o uso do R e do Python.\n\n\nFerramentas\nGit | GitHub | Docker | QGIS | Power BI | DuckDB | Spark | Quarto | Shiny | Ollama"
+  },
+  {
+    "objectID": "index.html#formação",
+    "href": "index.html#formação",
+    "title": "Pedro Augusto Borges dos Santos",
+    "section": "Formação",
+    "text": "Formação\n\nMestrado em Planejamento Urbano\n03-2020 a 07-2022\nUniversidade Federal do Paraná, Programa de Pós-Graduação em Planejamento Urbano\n\n\nBacharelado em Engenharia Civil\n03-2013 a 06-2019\nUniversidade Federal do Paraná"
+  },
+  {
+    "objectID": "index.html#experiência",
+    "href": "index.html#experiência",
+    "title": "Pedro Augusto Borges dos Santos",
+    "section": "Experiência",
+    "text": "Experiência\n\nConsultor de Pesquisa\n09-2024 ~\nObservatório Nacional de Segurança Viária\n\n\nHead de Mobilidade Segura\n03-2023 a 08-2024\nObservatório Nacional de Segurança Viária\n\n\nEngenheiro Civil\n09-2022 a 02-2023\nURBTEC™\n\n\nResidente Técnico\n03-2020 a 08-2022\nObservatório Nacional de Segurança Viária\n\n\nEstagiário de Análise de Dados\n08-2018 a 08-2019\nObservatório Nacional de Segurança Viária\n\n\nEstagiário de Engenharia Civil\n08-2017 a 04-2018\nVettor Engenharia"
+  },
+  {
+    "objectID": "publicacoes.html",
+    "href": "publicacoes.html",
+    "title": "Publicações",
+    "section": "",
+    "text": "Publicações acadêmicas em periódicos e congressos.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nVelocidades inseguras em Curitiba-PR\n\n\n\n6 de nov. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEstimation of time savings during speeding\n\n\n\n6 de nov. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nVelocidades inseguras no entorno de unidades de saúde e escolas\n\n\n\n16 de out. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nVelocidades inseguras e nível de renda em áreas urbanas - o caso de Cuririba\n\n\n\n16 de out. de 2024\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAnálise da completude dos dados no Registro Nacional de Acidentes e Estatísticas de Trânsito (Renaest)\n\n\n\n4 de dez. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEstudo Naturalístico de Direção Brasileiro (NDS-BR) - da concepção aos primeiros resultados\n\n\n\n8 de nov. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nExcesso de velocidade na Área Calma de Curitiba (PR) - Análise dos fatores determinantes e estimativa de economia de tempo\n\n\n\n8 de nov. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIndicadores da segurança viária no cenário brasileiro\n\n\n\n7 de nov. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nO Plano Nacional de Redução de Mortes e Lesões no Trânsito - o papel dos municípios\n\n\n\n30 de mar. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAnálise do excesso de velocidade na Área Calma de Curitiba - PR\n\n\n\n1 de fev. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAutocorrelação espacial do excesso de velocidade em Curitiba - PR\n\n\n\n1 de fev. de 2023\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nEstabelecimento de metas de redução de mortes no trânsito nos municípios brasileiros\n\n\n\n25 de out. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nElaboração de um painel de visualização de dados naturalísticos de direção utilizando Power BI\n\n\n\n3 de out. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNDSBR - um pacote em linguagem R para análise de dados naturalísticos\n\n\n\n3 de out. de 2022\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nRodovias que Perdoam - Brasil (RQP-BR) - uma metodologia teórico-prática para a segurança viária\n\n\n\n8 de dez. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIs organized carpooling safer? Speeding and distracted driving behaviors from a naturalistic driving study in Brazil\n\n\n\n1 de mar. de 2021\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAvaliação do conteúdo dos portais dos Departamentos Estaduais de Trânsito - Detrans\n\n\n\n26 de nov. de 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nFatores determinantes para o excesso de velocidade em vias arteriais urbanas\n\n\n\n26 de nov. de 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPlataforma de coleta de dados naturalísticos de segurança viária\n\n\n\n16 de nov. de 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nNaturalistic driving study in Brazil - An snalysis of mobile phone use behavior while driving\n\n\n\n3 de set. de 2020\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nDesempenho Brasileiro da Década de Ação pela Segurança no Trânsito - Análise, Perspectivas e Indicadores\n\n\n\n1 de jun. de 2020\n\n\n\n\n\n\n\n\nSem itens correspondentes"
+  },
+  {
+    "objectID": "posts/ndsbr/ndsbr.html",
+    "href": "posts/ndsbr/ndsbr.html",
+    "title": "{ndsbr}",
+    "section": "",
+    "text": "O {ndsbr} foi criado para auxíliar as atividades do projeto de pesquisa Estudo Naturalístico de Direção Brasileiro (NDS-BR), buscando estabelecer métodos ágeis e reproduzíveis de análise com base no R (Santos e Bastos, 2023)."
+  },
+  {
+    "objectID": "posts/ndsbr/ndsbr.html#introdução",
+    "href": "posts/ndsbr/ndsbr.html#introdução",
+    "title": "{ndsbr}",
+    "section": "",
+    "text": "O {ndsbr} foi criado para auxíliar as atividades do projeto de pesquisa Estudo Naturalístico de Direção Brasileiro (NDS-BR), buscando estabelecer métodos ágeis e reproduzíveis de análise com base no R (Santos e Bastos, 2023)."
+  },
+  {
+    "objectID": "posts/ndsbr/ndsbr.html#o-que-são-dados-naturalísticos-de-direção",
+    "href": "posts/ndsbr/ndsbr.html#o-que-são-dados-naturalísticos-de-direção",
+    "title": "{ndsbr}",
+    "section": "O que são dados naturalísticos de direção?",
+    "text": "O que são dados naturalísticos de direção?\nSão dados coletados através de um método observacional conhecido como estudo naturalístico de direção (NDS). Esse método permite a investigação do comportamento dos condutores de veículos automotores em condições reais, sem qualquer tipo de restrição ou estímulo. O NDS também permite a coleta de dados sobre as condições externas ao longo do percurso do indivíduo, através do registro de coordenadas geográficas, velocidade do veículo e outros fatores externos (Bastos et al., 2023)."
+  },
+  {
+    "objectID": "posts/ndsbr/ndsbr.html#o-estudo-naturalístico-de-direção-brasileiro",
+    "href": "posts/ndsbr/ndsbr.html#o-estudo-naturalístico-de-direção-brasileiro",
+    "title": "{ndsbr}",
+    "section": "O Estudo Naturalístico de Direção Brasileiro",
+    "text": "O Estudo Naturalístico de Direção Brasileiro\nO Estudo Naturalístico de Direção Brasileiro (NDS-BR) trata-se de uma iniciativa inédita no Brasil e tem por objetivo conhecer o comportamento dos condutores brasileiros a fim de orientar o planejamento de ações de segurança com foco sobre o fator humano e a engenharia viária. Em sua primeira fase, o estudo tem sido realizado em Curitiba e Região Metropolitana, com início em 2019."
+  },
+  {
+    "objectID": "posts/ndsbr/ndsbr.html#estrutura-do-pacote",
+    "href": "posts/ndsbr/ndsbr.html#estrutura-do-pacote",
+    "title": "{ndsbr}",
+    "section": "Estrutura do pacote",
+    "text": "Estrutura do pacote\nO ndsbr apresenta quatro categorias principais de funções: nds_create, nds_calc, nds_join e nds_download.\nAs funções do nds_create são utilizadas para criar objetos sf, representando objetos espaciais com base nos dados naturatísticos:\n\nnds_create_points()\nnds_create_lines()\n\nAs funções do nds_calc podem ser utilizadas para extrair informações da amostra, como tempo de viagem, distância percorrida e taxa de excesso de velocidade:\n\nnds_calc_dist()\nnds_calc_time()\nnds_calc_speeding()\n\nAs funções do nds_join realizam a junção espacial dos dados do NDS-BR com outros dados espaciais, como eixos de vias, polígonos dos bairros de Curitiba e dados sobre os limites de velocidade das vias\n\nnds_join_axis()\nnds_join_neigh()\nnds_join_spdlimit()\n\nPor fim, nds_load_data() carrega a amostra de dados naturalísticos e as funções nds_download_sf() e nds_download_cwb_osm() auxiliam no download de dados espaciais necessários para o projeto."
+  },
+  {
+    "objectID": "posts/ndsbr/ndsbr.html#utilizando-o-ndsbr",
+    "href": "posts/ndsbr/ndsbr.html#utilizando-o-ndsbr",
+    "title": "{ndsbr}",
+    "section": "Utilizando o {ndsbr}",
+    "text": "Utilizando o {ndsbr}\nAqui contém uma aplicação rápida do {ndsbr} para verificar o perfil de velocidade de umas das viagens presentes na amostra. O primeiro passo é instalar o pacote. Ele não está hospedado no CRAN, assim é necessário instalar pelo {remotes} ou {pak}. Aqui também é carregado os pacotes {ggplot2} e {patchwork} para a visualização dos resultados.\n\n# pak::pak(\"pabsantos/ndsbr\")\nlibrary(ndsbr)\nlibrary(ggplot2)\nlibrary(patchwork)\n\nA função nds_load_data() carrega os dados da amostra. O pacote já inclui uma amostra de demonstração. Para acessar, deve-se utilizar a função system.file() para extrair o caminho dos arquivos e depois inserir no nds_load_data().\n\npath &lt;- system.file('extdata', package = \"ndsbr\")\nndsbr_sample &lt;- nds_load_data('driver', path)\n\nNesse exemplo foi considerado apenas os dados da viagem “A05”. Como eu quero fazer um mapa da velocidade praticada, eu utilizo a função nds_create_points() para transformar o tibble em sf.\n\nndsbr_trip_a05 &lt;- subset(ndsbr_sample, ID == \"A05\")\nsf_trip_a05 &lt;- nds_create_points(ndsbr_trip_a05, x = \"LONG\", y = \"LAT\")\n\nTambém vai ser necessário os dados de vias de Curitiba para plotar o mapa. A função nds_download_sf() ajuda a fazer o download e carregar o objeto sf no projeto.\n\nurl_vias_cwb &lt;- \"https://ippuc.org.br/geodownloads/SHAPES_SIRGAS/EIXO_RUA_SIRGAS.zip\"\nvias_cwb &lt;- nds_download_sf(url_vias_cwb)\n\nReading layer `EIXO_RUA' from data source \n  `/private/var/folders/r3/lgl0wpys5y75d4vfnwp96jf80000gn/T/RtmpBMD68X/filec36c2a6a9c81' \n  using driver `ESRI Shapefile'\nSimple feature collection with 40355 features and 21 fields\nGeometry type: MULTILINESTRING\nDimension:     XY\nBounding box:  xmin: 662030.4 ymin: 7162884 xmax: 682331.9 ymax: 7195625\nProjected CRS: SIRGAS 2000 / UTM zone 22S\n\n\nPor fim, com auxílio do {ggplot2} é possível visualizar a velocidade praticada no trajeto da viagem A05 e também o perfil de velocidade ao longo do tempo de viagem.\n\ntheme_set(theme_bw(base_family = 'serif'))\n\nmap &lt;- ggplot() +\n    geom_sf(data = vias_cwb, color = \"grey20\", lwd = 0.1, alpha = 0.5) +\n    geom_sf(data = sf_trip_a05, aes(color = SPD_KMH)) +\n    theme(legend.position = 'none') +\n    scale_color_viridis_c()\n\nplot &lt;- ggplot(sf_trip_a05, aes(x = TIME_ACUM, y = SPD_KMH, color = SPD_KMH)) +\n    geom_line() +\n    scale_color_viridis_c() +\n    labs(\n        x = \"Tempo de viagem (s)\",\n        y = \"Velocidade (km/h)\"\n    ) +\n    theme(legend.position = 'none')\n\nmap | plot\n\n\n\n\n\n\n\nFigura 1: Perfil de velocidade da viagem A05"
+  },
+  {
+    "objectID": "posts/ndsbr/ndsbr.html#conclusão",
+    "href": "posts/ndsbr/ndsbr.html#conclusão",
+    "title": "{ndsbr}",
+    "section": "Conclusão",
+    "text": "Conclusão\nO desenvolvimento do {ndsbr} ajudou nas atividades de pesquisa quantitativa dentro do projeto NDS-BR, padronizando e documentando os métodos que geralmente são mais utilizados pelos seus integrantes.\nNo futuro eu também pretendo elaborar uma versão para o Python, auxiliando os pesquisadores que preferem essa linguagem em relação ao R."
+  },
+  {
+    "objectID": "midia.html",
+    "href": "midia.html",
+    "title": "Mídia",
+    "section": "",
+    "text": "Participações em reportagens de TV, rádio, jornais e revistas.\n\n\n\n\n\n\n\n\n\nTítulo\n\n\nData\n\n\n\n\n\n\nProjeto de Lei pretende implantar sinalização de segurança para motociclistas em São José dos Campos/SP\n\n\n4 de jul. de 2024\n\n\n\n\nBandeira de Nunes e elogiada por Boulos, Faixa Azul para motos vai chegar a 200 km sem dados que comprovem eficácia\n\n\n14 de jun. de 2024\n\n\n\n\nRegião supera Capital e Estado em reprovados em teste da CNH\n\n\n14 de mai. de 2024\n\n\n\n\nMorre motorista de carro com oito passageiros que capotou em Itaquera, Zona Leste de São Paulo\n\n\n13 de mai. de 2024\n\n\n\n\nMorre motorista de carro com oito passageiros que capotou em Itaquera, Zona Leste de São Paulo\n\n\n13 de mai. de 2024\n\n\n\n\n‘Situação das mortes no trânsito, que já é grave, está piorando’, diz ONSV\n\n\n8 de mai. de 2024\n\n\n\n\nAcidentes de trânsito fatais aumentam no Brasil. Conheça o sistema que pode prever ocorrências\n\n\n6 de mai. de 2024\n\n\n\n\nNo presente, tecnologia treina motoristas; no futuro, poderá substituí-los\n\n\n2 de mai. de 2024\n\n\n\n\nEm janeiro, região registra uma morte a cada dois dias no trânsito\n\n\n27 de fev. de 2024\n\n\n\n\nEm setembro, Grande ABC registra mês mais letal do ano no trânsito\n\n\n1 de nov. de 2023\n\n\n\n\nSaiba se você precisa acender os faróis durante o dia ao pegar a estrada no feriadão\n\n\n1 de nov. de 2023\n\n\n\n\nJustiça determina a prisão preventiva de jovem que atropelou e matou idosas na zona norte de SP\n\n\n31 de out. de 2023\n\n\n\n\nOrientações para circular em pistas com baixa visibilidade e molhadas\n\n\n21 de set. de 2023\n\n\n\n\nGrande ABC tem semestre mais letal para motociclistas\n\n\n27 de jul. de 2023\n\n\n\n\nNa contramão dos direitos humanos, a falta de mobilidade urbana imobiliza o acesso\n\n\n5 de jul. de 2023\n\n\n\n\nSão Paulo tem recorde de motos novas nas ruas e desafio no trânsito\n\n\n30 de mai. de 2023\n\n\n\n\nSP - 70 ônibus clandestinos de viagem foram apreendidos no 1º trimestre\n\n\n22 de mai. de 2023\n\n\n\n\nMaio Amarelo começa com 26 acidentes na Grande SP\n\n\n4 de mai. de 2023\n\n\n\n\nRegião tem mês de março com mais mortes no trânsito\n\n\n1 de mai. de 2023\n\n\n\n\n\nSem itens correspondentes"
+  }
+]
