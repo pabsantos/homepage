@@ -1,0 +1,76 @@
+---
+title: "{roadtrafficdeaths}"
+subtitle: Óbitos no trânsito brasileiro
+date: last-modified
+author: Pedro Borges
+bibliography: refs.bib
+csl: apa.csl
+cap-location: margin
+execute:
+    warning: false
+    freeze: auto
+editor_options: 
+  chunk_output_type: console
+---
+
+## Introdução
+
+Um dos indicadores do nível da segurança viária de um local ou sistema é a quantidade de óbitos no trânsito. Esse valor normalmente é utilizado como base para construir uma taxa de óbitos por quantidade de veículos ou por quantidade de habitantes.
+
+No Brasil, esses dados de óbitos são disponibilizados pelo Ministério da Saúde, através das declarações de óbitos (DOs) armazenadas no Sistema de Informações de Mortalidade (SIM) do Datasus. Os óbitos ocorridos no trânsito são identificados pelos códigos entre V01 e V89 do CID-10.
+
+Considerando o uso constante desses dados para monitorar o desempenho da segurança e para realizar estudos técnicos e científicos, o pacote {roadtrafficdeaths} [@santosRoadtrafficdeathsRoadTraffic2024] para o R foi criado como um conjunto de dados com as DOs ocorridos no trânsito, com dados desde 1996. 
+
+## Sobre o pacote
+
+O pacote contém um `data.frame` nomeado `rtdeaths`, com mais de 970 mil observações (DOs) e 23 atributos. Esse objeto é carregado juntamente ao carregar o pacote com o comando `library(roadtrafficdeaths)`.
+
+```{r}
+#| label: dataframe
+
+# pak::pak("pabsantos/roadtrafficdeaths")
+library(roadtrafficdeaths)
+
+str(rtdeaths)
+```
+
+Mais detalhes sobre cada atributo podem ser consultados na [documentação do pacote](https://pabsantos.github.io/roadtrafficdeaths/reference/rtdeaths.html){target="_blank"} com o comando `?rtdeaths` no console do R.
+
+## Utilizando os dados
+
+Para exemplificar o uso desses dados, foi contabilizada a quantidade de óbitos no trânsito entre 1996 e 2022 por região do Brasil. Além de carregar o {roadtrafficdeaths}, esse exemplo também necessita das bibliotecas {dplyr} e { ggplot2}.
+
+```{r}
+#| label: setup
+
+library(ggplot2)
+library(dplyr)
+```
+
+Com auxílio do `dplyr::count()`, fez-se a contagem dos óbitos com base nos atributos `ano_ocorrencia` e `nome_regiao_ocor`.
+
+```{r}
+#| label: fig-obitos
+#| fig-cap: Quantidade de óbitos por região e ano
+obitos <- count(rtdeaths, ano_ocorrencia, nome_regiao_ocor)
+obitos <- na.omit(obitos)
+
+ggplot(obitos, aes(x = ano_ocorrencia, y = n, color = nome_regiao_ocor)) +
+    geom_line() +
+    geom_point(pch = 21, fill = "white", size = 2) +
+    labs(x = NULL, y = NULL, color = "Região:") +
+    theme_bw(base_family = "serif") +
+    theme(
+        legend.position = "top",
+        legend.direction = "horizontal",
+        legend.justification = "left"
+    ) +
+    scale_x_continuous(minor_breaks = NULL) +
+    scale_y_continuous(limits = c(0, NA))
+```
+
+## Conclusão
+
+A criação do {roadtrafficdeaths} possibilitou ter os dados de óbitos no trânsito brasileiro de forma centralizada e documentada, com fácil acesso para todos que utilizam o R em seus trabalhos.
+
+Gostaria de agradecer aos autores do pacote {microdatasus} [@saldanhaMicrodatasusPacotePara2019], que facilitou muito o acesso e processamento das DOs presentes nos servidores do Datasus. 

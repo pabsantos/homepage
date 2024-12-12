@@ -2,6 +2,7 @@
 title: "{ndsbr}"
 subtitle: Um pacote do R para análise de dados naturalísticos
 date: last-modified
+author: Pedro Borges
 bibliography: refs.bib
 csl: apa.csl
 cap-location: margin
@@ -24,7 +25,7 @@ O Estudo Naturalístico de Direção Brasileiro (NDS-BR) trata-se de uma iniciat
 
 ## Estrutura do pacote
 
-O ndsbr apresenta quatro categorias principais de funções: `nds_create`, `nds_calc`, `nds_join` e `nds_download`.
+O {ndsbr} apresenta quatro categorias principais de funções: `nds_create`, `nds_calc`, `nds_join` e `nds_download`.
 
 As funções do `nds_create` são utilizadas para criar objetos sf, representando objetos espaciais com base nos dados naturatísticos:
 

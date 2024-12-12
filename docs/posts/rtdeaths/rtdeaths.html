@@ -8,7 +8,7 @@
 
 <meta name="author" content="Pedro Borges">
 
-<title>{ndsbr} – Pedro Borges</title>
+<title>{roadtrafficdeaths} – Pedro Borges</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -160,8 +160,8 @@ div.csl-indent {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">{ndsbr}</h1>
-<p class="subtitle lead">Um pacote do R para análise de dados naturalísticos</p>
+<h1 class="title">{roadtrafficdeaths}</h1>
+<p class="subtitle lead">Óbitos no trânsito brasileiro</p>
 </div>
 
 
@@ -178,7 +178,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Data de Publicação</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">9 de dezembro de 2024</p>
+      <p class="date">12 de dezembro de 2024</p>
     </div>
   </div>
   
@@ -191,101 +191,80 @@ div.csl-indent {
 
 
 <section id="introdução" class="level2">
-<h2 class="anchored" data-anchor-id="introdução">Introdução <img src="https://pabsantos.github.io/ndsbr/reference/figures/README-ndsbr.png" align="right" width="150"></h2>
-<p>O <a href="https://pabsantos.github.io/ndsbr/" target="_blank">{ndsbr}</a> foi criado para auxíliar as atividades do projeto de pesquisa <a href="https://tecnologia.ufpr.br/ceppur/estudo-naturalistico-de-direcao-brasileiro/" target="_blank">Estudo Naturalístico de Direção Brasileiro (NDS-BR)</a>, buscando estabelecer métodos ágeis e reproduzíveis de análise com base no R <span class="citation" data-cites="santosNDSBRUMPACOTE2023">(<a href="#ref-santosNDSBRUMPACOTE2023" role="doc-biblioref">Santos e Bastos, 2023</a>)</span>.</p>
+<h2 class="anchored" data-anchor-id="introdução">Introdução</h2>
+<p>Um dos indicadores do nível da segurança viária de um local ou sistema é a quantidade de óbitos no trânsito. Esse valor normalmente é utilizado como base para construir uma taxa de óbitos por quantidade de veículos ou por quantidade de habitantes.</p>
+<p>No Brasil, esses dados de óbitos são disponibilizados pelo Ministério da Saúde, através das declarações de óbitos (DOs) armazenadas no Sistema de Informações de Mortalidade (SIM) do Datasus. Os óbitos ocorridos no trânsito são identificados pelos códigos entre V01 e V89 do CID-10.</p>
+<p>Considerando o uso constante desses dados para monitorar o desempenho da segurança e para realizar estudos técnicos e científicos, o pacote {roadtrafficdeaths} <span class="citation" data-cites="santosRoadtrafficdeathsRoadTraffic2024">(<a href="#ref-santosRoadtrafficdeathsRoadTraffic2024" role="doc-biblioref">Santos e Saraiva, 2024</a>)</span> para o R foi criado como um conjunto de dados com as DOs ocorridos no trânsito, com dados desde 1996.</p>
 </section>
-<section id="o-que-são-dados-naturalísticos-de-direção" class="level2">
-<h2 class="anchored" data-anchor-id="o-que-são-dados-naturalísticos-de-direção">O que são dados naturalísticos de direção?</h2>
-<p>São dados coletados através de um método observacional conhecido como estudo naturalístico de direção (NDS). Esse método permite a investigação do comportamento dos condutores de veículos automotores em condições reais, sem qualquer tipo de restrição ou estímulo. O NDS também permite a coleta de dados sobre as condições externas ao longo do percurso do indivíduo, através do registro de coordenadas geográficas, velocidade do veículo e outros fatores externos <span class="citation" data-cites="bastosESTUDONATURALISTICODIRECAO2023">(<a href="#ref-bastosESTUDONATURALISTICODIRECAO2023" role="doc-biblioref">Bastos et al., 2023</a>)</span>.</p>
-</section>
-<section id="o-estudo-naturalístico-de-direção-brasileiro" class="level2">
-<h2 class="anchored" data-anchor-id="o-estudo-naturalístico-de-direção-brasileiro">O Estudo Naturalístico de Direção Brasileiro</h2>
-<p>O Estudo Naturalístico de Direção Brasileiro (NDS-BR) trata-se de uma iniciativa inédita no Brasil e tem por objetivo conhecer o comportamento dos condutores brasileiros a fim de orientar o planejamento de ações de segurança com foco sobre o fator humano e a engenharia viária. Em sua primeira fase, o estudo tem sido realizado em Curitiba e Região Metropolitana, com início em 2019.</p>
-</section>
-<section id="estrutura-do-pacote" class="level2">
-<h2 class="anchored" data-anchor-id="estrutura-do-pacote">Estrutura do pacote</h2>
-<p>O {ndsbr} apresenta quatro categorias principais de funções: <code>nds_create</code>, <code>nds_calc</code>, <code>nds_join</code> e <code>nds_download</code>.</p>
-<p>As funções do <code>nds_create</code> são utilizadas para criar objetos sf, representando objetos espaciais com base nos dados naturatísticos:</p>
-<ul>
-<li><code>nds_create_points()</code></li>
-<li><code>nds_create_lines()</code></li>
-</ul>
-<p>As funções do <code>nds_calc</code> podem ser utilizadas para extrair informações da amostra, como tempo de viagem, distância percorrida e taxa de excesso de velocidade:</p>
-<ul>
-<li><code>nds_calc_dist()</code></li>
-<li><code>nds_calc_time()</code></li>
-<li><code>nds_calc_speeding()</code></li>
-</ul>
-<p>As funções do <code>nds_join</code> realizam a junção espacial dos dados do NDS-BR com outros dados espaciais, como eixos de vias, polígonos dos bairros de Curitiba e dados sobre os limites de velocidade das vias</p>
-<ul>
-<li><code>nds_join_axis()</code></li>
-<li><code>nds_join_neigh()</code></li>
-<li><code>nds_join_spdlimit()</code></li>
-</ul>
-<p>Por fim, <code>nds_load_data()</code> carrega a amostra de dados naturalísticos e as funções <code>nds_download_sf()</code> e <code>nds_download_cwb_osm()</code> auxiliam no download de dados espaciais necessários para o projeto.</p>
-</section>
-<section id="utilizando-o-ndsbr" class="level2 page-columns page-full">
-<h2 class="anchored" data-anchor-id="utilizando-o-ndsbr">Utilizando o {ndsbr}</h2>
-<p>Aqui contém uma aplicação rápida do {ndsbr} para verificar o perfil de velocidade de umas das viagens presentes na amostra. O primeiro passo é instalar o pacote. Ele não está hospedado no CRAN, assim é necessário instalar pelo {remotes} ou {pak}. Aqui também é carregado os pacotes {ggplot2} e {patchwork} para a visualização dos resultados.</p>
+<section id="sobre-o-pacote" class="level2">
+<h2 class="anchored" data-anchor-id="sobre-o-pacote">Sobre o pacote</h2>
+<p>O pacote contém um <code>data.frame</code> nomeado <code>rtdeaths</code>, com mais de 970 mil observações (DOs) e 23 atributos. Esse objeto é carregado juntamente ao carregar o pacote com o comando <code>library(roadtrafficdeaths)</code>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># pak::pak("pabsantos/ndsbr")</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ndsbr)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(patchwork)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>A função <code>nds_load_data()</code> carrega os dados da amostra. O pacote já inclui uma amostra de demonstração. Para acessar, deve-se utilizar a função <code>system.file()</code> para extrair o caminho dos arquivos e depois inserir no <code>nds_load_data()</code>.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>path <span class="ot">&lt;-</span> <span class="fu">system.file</span>(<span class="st">'extdata'</span>, <span class="at">package =</span> <span class="st">"ndsbr"</span>)</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>ndsbr_sample <span class="ot">&lt;-</span> <span class="fu">nds_load_data</span>(<span class="st">'driver'</span>, path)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Nesse exemplo foi considerado apenas os dados da viagem “A05”. Como eu quero fazer um mapa da velocidade praticada, eu utilizo a função <code>nds_create_points()</code> para transformar o <code>tibble</code> em <code>sf</code>.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>ndsbr_trip_a05 <span class="ot">&lt;-</span> <span class="fu">subset</span>(ndsbr_sample, ID <span class="sc">==</span> <span class="st">"A05"</span>)</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>sf_trip_a05 <span class="ot">&lt;-</span> <span class="fu">nds_create_points</span>(ndsbr_trip_a05, <span class="at">x =</span> <span class="st">"LONG"</span>, <span class="at">y =</span> <span class="st">"LAT"</span>)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>Também vai ser necessário os dados de vias de Curitiba para plotar o mapa. A função <code>nds_download_sf()</code> ajuda a fazer o download e carregar o objeto <code>sf</code> no projeto.</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>url_vias_cwb <span class="ot">&lt;-</span> <span class="st">"https://ippuc.org.br/geodownloads/SHAPES_SIRGAS/EIXO_RUA_SIRGAS.zip"</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>vias_cwb <span class="ot">&lt;-</span> <span class="fu">nds_download_sf</span>(url_vias_cwb)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># pak::pak("pabsantos/roadtrafficdeaths")</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(roadtrafficdeaths)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">str</span>(rtdeaths)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>Reading layer `EIXO_RUA' from data source 
-  `/private/var/folders/r3/lgl0wpys5y75d4vfnwp96jf80000gn/T/RtmpXsQLIb/file11b68ea5580f' 
-  using driver `ESRI Shapefile'
-Simple feature collection with 40355 features and 21 fields
-Geometry type: MULTILINESTRING
-Dimension:     XY
-Bounding box:  xmin: 662030.4 ymin: 7162884 xmax: 682331.9 ymax: 7195625
-Projected CRS: SIRGAS 2000 / UTM zone 22S</code></pre>
+<pre><code>'data.frame':   970862 obs. of  23 variables:
+ $ cid                : chr  "V099" "V234" "V789" "V031" ...
+ $ cod_modal_vitima   : chr  "V0" "V2" "V7" "V0" ...
+ $ modal_vitima       : chr  "Pedestre" "Motocicleta" "Ônibus" "Pedestre" ...
+ $ cod_modal_outro    : chr  "9" "3" "8" "3" ...
+ $ modal_outro        : chr  "Não especificado" "Automóvel" "Sem colisão" "Automóvel" ...
+ $ data_ocorrencia    : Date, format: "1999-03-28" "1999-02-22" ...
+ $ ano_ocorrencia     : num  1999 1999 1999 2006 2014 ...
+ $ idade_vitima       : num  58 28 33 19 43 25 22 19 24 24 ...
+ $ faixa_etaria_vitima: Factor w/ 17 levels "0 a 4 anos","5 a 9 anos",..: 12 6 7 4 9 6 5 4 5 5 ...
+ $ sexo_vitima        : chr  "Feminino" "Masculino" "Masculino" "Masculino" ...
+ $ escolaridade_vitima: chr  NA NA NA "de 8 a 11 anos" ...
+ $ raca_vitima        : chr  "Preta" "Parda" "Parda" "Branca" ...
+ $ ocup_cbo_vitima    : chr  "00612" "00004" "00034" NA ...
+ $ estado_civil_vitima: chr  NA NA NA "solteiro" ...
+ $ local_ocor         : chr  "hospital" "saude" "saude" "via" ...
+ $ cod_municipio_ocor : chr  "270030" "270750" "270630" "355030" ...
+ $ nome_regiao_ocor   : chr  "Nordeste" "Nordeste" "Nordeste" "Sudeste" ...
+ $ cod_municipio_res  : chr  "270260" "270030" "270760" "355030" ...
+ $ nome_regiao_res    : chr  "Nordeste" "Nordeste" "Nordeste" "Sudeste" ...
+ $ nome_uf_ocor       : chr  "Alagoas" "Alagoas" "Alagoas" "São Paulo" ...
+ $ nome_municipio_ocor: chr  "Arapiraca" "Porto Real do Colégio" "Palmeira dos Índios" "São Paulo" ...
+ $ nome_uf_res        : chr  "Alagoas" "Alagoas" "Alagoas" "São Paulo" ...
+ $ nome_municipio_res : chr  "Feira Grande" "Arapiraca" "Quebrangulo" "São Paulo" ...</code></pre>
 </div>
 </div>
-<p>Por fim, com auxílio do {ggplot2} é possível visualizar a velocidade praticada no trajeto da viagem A05 e também o perfil de velocidade ao longo do tempo de viagem.</p>
+<p>Mais detalhes sobre cada atributo podem ser consultados na <a href="https://pabsantos.github.io/roadtrafficdeaths/reference/rtdeaths.html" target="_blank">documentação do pacote</a> com o comando <code>?rtdeaths</code> no console do R.</p>
+</section>
+<section id="utilizando-os-dados" class="level2 page-columns page-full">
+<h2 class="anchored" data-anchor-id="utilizando-os-dados">Utilizando os dados</h2>
+<p>Para exemplificar o uso desses dados, foi contabilizada a quantidade de óbitos no trânsito entre 1996 e 2022 por região do Brasil. Além de carregar o {roadtrafficdeaths}, esse exemplo também necessita das bibliotecas {dplyr} e { ggplot2}.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Com auxílio do <code>dplyr::count()</code>, fez-se a contagem dos óbitos com base nos atributos <code>ano_ocorrencia</code> e <code>nome_regiao_ocor</code>.</p>
 <div class="cell page-columns page-full">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_set</span>(<span class="fu">theme_bw</span>(<span class="at">base_family =</span> <span class="st">'serif'</span>))</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>map <span class="ot">&lt;-</span> <span class="fu">ggplot</span>() <span class="sc">+</span></span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_sf</span>(<span class="at">data =</span> vias_cwb, <span class="at">color =</span> <span class="st">"grey20"</span>, <span class="at">lwd =</span> <span class="fl">0.1</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_sf</span>(<span class="at">data =</span> sf_trip_a05, <span class="fu">aes</span>(<span class="at">color =</span> SPD_KMH)) <span class="sc">+</span></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">'none'</span>) <span class="sc">+</span></span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_color_viridis_c</span>()</span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>plot <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(sf_trip_a05, <span class="fu">aes</span>(<span class="at">x =</span> TIME_ACUM, <span class="at">y =</span> SPD_KMH, <span class="at">color =</span> SPD_KMH)) <span class="sc">+</span></span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>() <span class="sc">+</span></span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_color_viridis_c</span>() <span class="sc">+</span></span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(</span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>        <span class="at">x =</span> <span class="st">"Tempo de viagem (s)"</span>,</span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>        <span class="at">y =</span> <span class="st">"Velocidade (km/h)"</span></span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(<span class="at">legend.position =</span> <span class="st">'none'</span>)</span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>map <span class="sc">|</span> plot</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>obitos <span class="ot">&lt;-</span> <span class="fu">count</span>(rtdeaths, ano_ocorrencia, nome_regiao_ocor)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>obitos <span class="ot">&lt;-</span> <span class="fu">na.omit</span>(obitos)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(obitos, <span class="fu">aes</span>(<span class="at">x =</span> ano_ocorrencia, <span class="at">y =</span> n, <span class="at">color =</span> nome_regiao_ocor)) <span class="sc">+</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_point</span>(<span class="at">pch =</span> <span class="dv">21</span>, <span class="at">fill =</span> <span class="st">"white"</span>, <span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">x =</span> <span class="cn">NULL</span>, <span class="at">y =</span> <span class="cn">NULL</span>, <span class="at">color =</span> <span class="st">"Região:"</span>) <span class="sc">+</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme_bw</span>(<span class="at">base_family =</span> <span class="st">"serif"</span>) <span class="sc">+</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.position =</span> <span class="st">"top"</span>,</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.direction =</span> <span class="st">"horizontal"</span>,</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.justification =</span> <span class="st">"left"</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_x_continuous</span>(<span class="at">minor_breaks =</span> <span class="cn">NULL</span>) <span class="sc">+</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_y_continuous</span>(<span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="cn">NA</span>))</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display page-columns page-full">
-<div id="fig-plot" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
+<div id="fig-obitos" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
 <figure class="quarto-float quarto-float-fig figure page-columns page-full">
-<div aria-describedby="fig-plot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="ndsbr_files/figure-html/fig-plot-1.png" class="img-fluid figure-img" width="672">
+<div aria-describedby="fig-obitos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="rtdeaths_files/figure-html/fig-obitos-1.png" class="img-fluid figure-img" width="672">
 </div>
-<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-plot-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Figura&nbsp;1: Perfil de velocidade da viagem A05
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-obitos-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: Quantidade de óbitos por região e ano
 </figcaption>
 </figure>
 </div>
@@ -294,22 +273,19 @@ Figura&nbsp;1: Perfil de velocidade da viagem A05
 </section>
 <section id="conclusão" class="level2">
 <h2 class="anchored" data-anchor-id="conclusão">Conclusão</h2>
-<p>O desenvolvimento do {ndsbr} ajudou nas atividades de pesquisa quantitativa dentro do projeto NDS-BR, padronizando e documentando os métodos que geralmente são mais utilizados pelos seus integrantes.</p>
-<p>No futuro eu também pretendo elaborar uma versão para o Python, auxiliando os pesquisadores que preferem essa linguagem em relação ao R.</p>
-</section>
-<section id="referências" class="level2">
-
+<p>A criação do {roadtrafficdeaths} possibilitou ter os dados de óbitos no trânsito brasileiro de forma centralizada e documentada, com fácil acesso para todos que utilizam o R em seus trabalhos.</p>
+<p>Gostaria de agradecer aos autores do pacote {microdatasus} <span class="citation" data-cites="saldanhaMicrodatasusPacotePara2019">(<a href="#ref-saldanhaMicrodatasusPacotePara2019" role="doc-biblioref">Saldanha et al., 2019</a>)</span>, que facilitou muito o acesso e processamento das DOs presentes nos servidores do Datasus.</p>
 
 
 
 </section>
 
 <div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">Referências</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" data-line-spacing="2" role="list">
-<div id="ref-bastosESTUDONATURALISTICODIRECAO2023" class="csl-entry" role="listitem">
-Bastos, J. T., Bernardinis, M. de A. P., Neris, D. F., Schmitz, A., Gadda, T. M. C., Amancio, E. C., e Santos, P. A. B. (2023). <span>ESTUDO NATURALÍSTICO DE DIREÇÃO BRASILEIRO</span> (<span>NDS-BR</span>): <span>DA CONCEPÇÃO AOS PRIMEIROS RESULTADOS</span>. <em>Anais Do <span>Congresso</span> de <span>Pesquisa</span> e <span>Ensino</span> Em <span>Transportes</span></em>. 37º <span>Congresso</span> de <span>Pesquisa</span> e <span>Ensino</span> Em <span>Transportes</span>. <a href="https://proceedings.science/anpet-2023/trabalhos/estudo-naturalistico-de-direcao-brasileiro-nds-br-da-concepcao-aos-primeiros-res?lang=pt-br">https://proceedings.science/anpet-2023/trabalhos/estudo-naturalistico-de-direcao-brasileiro-nds-br-da-concepcao-aos-primeiros-res?lang=pt-br</a>
+<div id="ref-saldanhaMicrodatasusPacotePara2019" class="csl-entry" role="listitem">
+Saldanha, R. D. F., Bastos, R. R., e Barcellos, C. (2019). Microdatasus: Pacote Para Download e Pré-Processamento de Microdados Do <span>Departamento</span> de <span>Informática</span> Do <span>SUS</span> (<span>DATASUS</span>). <em>Cadernos de Saúde Pública</em>, <em>35</em>(9), e00032419. <a href="https://doi.org/10.1590/0102-311x00032419">https://doi.org/10.1590/0102-311x00032419</a>
 </div>
-<div id="ref-santosNDSBRUMPACOTE2023" class="csl-entry" role="listitem">
-Santos, P. A. B. D., e Bastos, J. T. (2023). <em><span>NDSBR</span>: <span>UM PACOTE EM LINGUAGEM R PARA ANÁLISE DE DADOS NATURALÍSTICOS</span>)</em>. 121–128. <a href="https://doi.org/10.5380/3stpr2022.comtec01p121-128">https://doi.org/10.5380/3stpr2022.comtec01p121-128</a>
+<div id="ref-santosRoadtrafficdeathsRoadTraffic2024" class="csl-entry" role="listitem">
+Santos, P. A. B., e Saraiva, J. P. M. (2024). <em>Roadtrafficdeaths: <span>Road</span> Traffic Deaths Data from Brazil</em> (Versão 0.5.0) [Software]. Observatório Nacional de Segurança Viária. <a href="https://pabsantos.github.io/roadtrafficdeaths/">https://pabsantos.github.io/roadtrafficdeaths/</a>
 </div>
 </div></section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

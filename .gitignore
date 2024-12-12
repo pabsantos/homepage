@@ -166,3 +166,5 @@ _site
 .vscode
 _freeze
 *_cache/
+data/
+.Rproj.user
