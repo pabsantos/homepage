@@ -11,6 +11,15 @@ execute:
     freeze: auto
 ---
 
+```{r}
+#| label: font
+#| include: false
+
+library(showtext)
+font_add_google("Roboto Mono", "roboto")
+showtext_auto()
+```
+
 ## Introdução <img src="https://pabsantos.github.io/ndsbr/reference/figures/README-ndsbr.png" align="right" width="150" />
 
 O [{ndsbr}](https://pabsantos.github.io/ndsbr/){target="_blank"} foi criado para auxíliar as atividades do projeto de pesquisa [Estudo Naturalístico de Direção Brasileiro (NDS-BR)](https://tecnologia.ufpr.br/ceppur/estudo-naturalistico-de-direcao-brasileiro/){target="_blank"}, buscando estabelecer métodos ágeis e reproduzíveis de análise com base no R [@santosNDSBRUMPACOTE2023].
@@ -95,7 +104,7 @@ Por fim, com auxílio do {ggplot2} é possível visualizar a velocidade praticad
 #| label: fig-plot
 #| fig-cap: Perfil de velocidade da viagem A05
 
-theme_set(theme_bw(base_family = 'serif'))
+theme_set(theme_bw(base_family = "roboto"))
 
 map <- ggplot() +
     geom_sf(data = vias_cwb, color = "grey20", lwd = 0.1, alpha = 0.5) +

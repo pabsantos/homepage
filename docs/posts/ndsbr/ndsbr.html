@@ -178,7 +178,7 @@ div.csl-indent {
     <div>
     <div class="quarto-title-meta-heading">Data de Publicação</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">9 de dezembro de 2024</p>
+      <p class="date">15 de dezembro de 2024</p>
     </div>
   </div>
   
@@ -249,7 +249,7 @@ div.csl-indent {
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>vias_cwb <span class="ot">&lt;-</span> <span class="fu">nds_download_sf</span>(url_vias_cwb)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Reading layer `EIXO_RUA' from data source 
-  `/private/var/folders/r3/lgl0wpys5y75d4vfnwp96jf80000gn/T/RtmpXsQLIb/file11b68ea5580f' 
+  `/private/var/folders/r3/lgl0wpys5y75d4vfnwp96jf80000gn/T/RtmpQFynzt/file14b04fc90a1c' 
   using driver `ESRI Shapefile'
 Simple feature collection with 40355 features and 21 fields
 Geometry type: MULTILINESTRING
@@ -260,7 +260,7 @@ Projected CRS: SIRGAS 2000 / UTM zone 22S</code></pre>
 </div>
 <p>Por fim, com auxílio do {ggplot2} é possível visualizar a velocidade praticada no trajeto da viagem A05 e também o perfil de velocidade ao longo do tempo de viagem.</p>
 <div class="cell page-columns page-full">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_set</span>(<span class="fu">theme_bw</span>(<span class="at">base_family =</span> <span class="st">'serif'</span>))</span>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_set</span>(<span class="fu">theme_bw</span>(<span class="at">base_family =</span> <span class="st">"roboto"</span>))</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>map <span class="ot">&lt;-</span> <span class="fu">ggplot</span>() <span class="sc">+</span></span>
 <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_sf</span>(<span class="at">data =</span> vias_cwb, <span class="at">color =</span> <span class="st">"grey20"</span>, <span class="at">lwd =</span> <span class="fl">0.1</span>, <span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
