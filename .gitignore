@@ -168,3 +168,4 @@ _freeze
 *_cache/
 data/
 .Rproj.user
+*.Rproj
