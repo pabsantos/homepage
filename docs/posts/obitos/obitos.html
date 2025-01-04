@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pt-BR" xml:lang="pt-BR"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.6.37">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Pedro Borges">
+
+<title>Óbitos no trânsito brasileiro em 2023 – Pedro Borges</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-29e2c20b02301cfff04dc8050bf30c7e.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-06e166266d73e763216586c837183e30.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "language": {
+    "search-no-results-text": "Nenhum resultado",
+    "search-matching-documents-text": "documentos correspondentes",
+    "search-copy-link-title": "Copiar link para a busca",
+    "search-hide-matches-text": "Esconder correspondências adicionais",
+    "search-more-match-text": "mais correspondência neste documento",
+    "search-more-matches-text": "mais correspondências neste documento",
+    "search-clear-button-title": "Limpar",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancelar",
+    "search-submit-button-title": "Enviar",
+    "search-label": "Procurar"
+  }
+}</script>
+<script src="../../site_libs/core-js-2.5.3/shim.min.js"></script>
+<script src="../../site_libs/react-18.2.0/react.min.js"></script>
+<script src="../../site_libs/react-18.2.0/react-dom.min.js"></script>
+<script src="../../site_libs/reactwidget-2.0.0/react-tools.js"></script>
+<script src="../../site_libs/htmlwidgets-1.6.4/htmlwidgets.js"></script>
+<link href="../../site_libs/reactable-0.4.4/reactable.css" rel="stylesheet">
+<script src="../../site_libs/reactable-binding-0.4.4/reactable.js"></script>
+
+
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Pedro Borges</span>
+    </a>
+  </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Alternar de navegação" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../blog.html"> 
+<span class="menu-text">Blog</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../publicacoes.html"> 
+<span class="menu-text">Publicações</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../midia.html"> 
+<span class="menu-text">Mídia</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+    <a href="https://github.com/pabsantos/homepage" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+    </div>
+<!-- main -->
+<main class="content page-columns page-full" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Óbitos no trânsito brasileiro em 2023</h1>
+<p class="subtitle lead">Dados consolidados do DATASUS</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Autor</div>
+    <div class="quarto-title-meta-contents">
+             <p>Pedro Borges </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Data de Publicação</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">6 de janeiro de 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introdução" class="level1">
+<h1>Introdução</h1>
+</section>
+<section id="nova-versão-do-roadtrafficdeaths" class="level1">
+<h1>Nova versão do {roadtrafficdeaths}</h1>
+</section>
+<section id="variação-nas-unidades-da-federação" class="level1 page-columns page-full">
+<h1>Variação nas unidades da federação</h1>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(geobr)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(roadtrafficdeaths)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(showtext)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(patchwork)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(gt)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="fu">font_add_google</span>(<span class="st">"Roboto Mono"</span>, <span class="st">"roboto"</span>)</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="fu">showtext_auto</span>()</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">theme_set</span>(<span class="fu">theme_bw</span>(<span class="at">base_family =</span> <span class="st">"roboto"</span>, <span class="at">base_size =</span> <span class="dv">8</span>))</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>obitos <span class="ot">&lt;-</span> rtdeaths <span class="sc">|&gt;</span> </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(ano_ocorrencia <span class="sc">%in%</span> <span class="fu">c</span>(<span class="dv">2022</span>, <span class="dv">2023</span>)) <span class="sc">|&gt;</span> </span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">count</span>(ano_ocorrencia, nome_uf_ocor) <span class="sc">|&gt;</span> </span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">drop_na</span>()</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>path <span class="ot">&lt;-</span> <span class="st">"ibge_cnv_projpopuf092116201_75_182_5.csv"</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>populacao <span class="ot">&lt;-</span> <span class="fu">read_csv2</span>(</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    path, </span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="at">locale =</span> <span class="fu">locale</span>(<span class="at">encoding =</span> <span class="st">"latin1"</span>), </span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">skip =</span> <span class="dv">3</span>, </span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">n_max =</span> <span class="dv">27</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>populacao_fixed <span class="ot">&lt;-</span> populacao <span class="sc">|&gt;</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    janitor<span class="sc">::</span><span class="fu">clean_names</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">pivot_longer</span>(</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>        <span class="at">cols =</span> <span class="sc">-</span>unidade_da_federacao,</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a>        <span class="at">names_to =</span> <span class="st">"ano"</span>,</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>        <span class="at">values_to =</span> <span class="st">"hab"</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">|&gt;</span> </span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(<span class="at">ano =</span> <span class="fu">str_sub</span>(ano, <span class="dv">2</span>, <span class="sc">-</span><span class="dv">1</span>) <span class="sc">|&gt;</span> <span class="fu">as.numeric</span>()) <span class="sc">|&gt;</span> </span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    tidyr<span class="sc">::</span><span class="fu">separate</span>(</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>        unidade_da_federacao,</span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>        <span class="at">into =</span> <span class="fu">c</span>(<span class="st">"cod_uf"</span>, <span class="st">"uf"</span>),</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>        <span class="at">sep =</span> <span class="st">" "</span>,</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>        <span class="at">extra =</span> <span class="st">"merge"</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>taxas <span class="ot">&lt;-</span> obitos <span class="sc">|&gt;</span> </span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">left_join</span>(</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>        populacao_fixed,</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>        <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"ano_ocorrencia"</span> <span class="ot">=</span> <span class="st">"ano"</span>, <span class="st">"nome_uf_ocor"</span> <span class="ot">=</span> <span class="st">"uf"</span>)</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">|&gt;</span> </span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>        <span class="at">taxa =</span> n <span class="sc">/</span> hab <span class="sc">*</span> <span class="dv">100000</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">|&gt;</span> </span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">group_by</span>(nome_uf_ocor) <span class="sc">|&gt;</span> </span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>        <span class="at">delta =</span> taxa <span class="sc">-</span> <span class="fu">lag</span>(taxa),</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>        <span class="at">delta_prop =</span> delta <span class="sc">/</span> <span class="fu">lag</span>(taxa)</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">|&gt;</span> </span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    <span class="fu">filter</span>(ano_ocorrencia <span class="sc">==</span> <span class="dv">2023</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">ungroup</span>()</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell page-columns page-full">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>taxas <span class="sc">|&gt;</span> </span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">select</span>(nome_uf_ocor, n, taxa, delta_prop) <span class="sc">|&gt;</span> </span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">gt</span>() <span class="sc">|&gt;</span> </span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">cols_label</span>(</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">nome_uf_ocor =</span> <span class="st">"UF"</span>,</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>        <span class="at">n =</span> <span class="st">"Óbitos"</span>,</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>        <span class="at">taxa =</span> <span class="st">"Taxa por 100 mil hab."</span>,</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>        <span class="at">delta_prop =</span> <span class="st">"Variação (2022-2023)"</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">|&gt;</span> </span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">fmt_number</span>(taxa) <span class="sc">|&gt;</span> </span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    <span class="fu">fmt_percent</span>(delta_prop) <span class="sc">|&gt;</span> </span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">data_color</span>(</span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>        <span class="at">columns =</span> taxa,</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>        <span class="at">palette =</span> <span class="st">"Oranges"</span></span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">|&gt;</span> </span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">data_color</span>(</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>        <span class="at">columns =</span> delta_prop,</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>        <span class="at">palette =</span> <span class="st">"RdBu"</span>,</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>        <span class="at">reverse =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>        <span class="at">domain =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">0.2</span>, <span class="fl">0.2</span>)</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">|&gt;</span> </span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>    <span class="fu">opt_interactive</span>(<span class="at">use_pagination =</span> <span class="cn">FALSE</span>) <span class="sc">|&gt;</span> </span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>    <span class="fu">opt_table_font</span>(</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>        <span class="at">font =</span> <span class="fu">google_font</span>(<span class="st">"Roboto Mono"</span>)</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">|&gt;</span> </span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>    <span class="fu">tab_options</span>(<span class="at">table.font.size =</span> <span class="st">"10pt"</span>)</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="tbl-taxas" class="cell quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="quarto-float quarto-float-tbl figure page-columns page-full">
+<div aria-describedby="tbl-taxas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<div id="nzuvewjgsc" class=".gt_table" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+#nzuvewjgsc table {
+  font-family: 'Roboto Mono', system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#nzuvewjgsc thead, #nzuvewjgsc tbody, #nzuvewjgsc tfoot, #nzuvewjgsc tr, #nzuvewjgsc td, #nzuvewjgsc th {
+  border-style: none;
+}
+
+#nzuvewjgsc p {
+  margin: 0;
+  padding: 0;
+}
+
+#nzuvewjgsc .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 10pt;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#nzuvewjgsc .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#nzuvewjgsc .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#nzuvewjgsc .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#nzuvewjgsc .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#nzuvewjgsc .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#nzuvewjgsc .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#nzuvewjgsc .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#nzuvewjgsc .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#nzuvewjgsc .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#nzuvewjgsc .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#nzuvewjgsc .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#nzuvewjgsc .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#nzuvewjgsc .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#nzuvewjgsc .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#nzuvewjgsc .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#nzuvewjgsc .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#nzuvewjgsc .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#nzuvewjgsc .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#nzuvewjgsc .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#nzuvewjgsc .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#nzuvewjgsc .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#nzuvewjgsc .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#nzuvewjgsc .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#nzuvewjgsc .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#nzuvewjgsc .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#nzuvewjgsc .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#nzuvewjgsc .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#nzuvewjgsc .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#nzuvewjgsc .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#nzuvewjgsc .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#nzuvewjgsc .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#nzuvewjgsc .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#nzuvewjgsc .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#nzuvewjgsc .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#nzuvewjgsc .gt_left {
+  text-align: left;
+}
+
+#nzuvewjgsc .gt_center {
+  text-align: center;
+}
+
+#nzuvewjgsc .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#nzuvewjgsc .gt_font_normal {
+  font-weight: normal;
+}
+
+#nzuvewjgsc .gt_font_bold {
+  font-weight: bold;
+}
+
+#nzuvewjgsc .gt_font_italic {
+  font-style: italic;
+}
+
+#nzuvewjgsc .gt_super {
+  font-size: 65%;
+}
+
+#nzuvewjgsc .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#nzuvewjgsc .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#nzuvewjgsc .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#nzuvewjgsc .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#nzuvewjgsc .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#nzuvewjgsc .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#nzuvewjgsc .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#nzuvewjgsc .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#nzuvewjgsc div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+<div id="nzuvewjgsc" class="reactable html-widget" style="width:auto;height:auto;"></div>
+<script type="application/json" data-for="nzuvewjgsc">{"x":{"tag":{"name":"Reactable","attribs":{"data":{"nome_uf_ocor":["Acre","Alagoas","Amapá","Amazonas","Bahia","Ceará","Distrito Federal","Espírito Santo","Goiás","Maranhão","Mato Grosso","Mato Grosso do Sul","Minas Gerais","Paraná","Paraíba","Pará","Pernambuco","Piauí","Rio Grande do Norte","Rio Grande do Sul","Rio de Janeiro","Rondônia","Roraima","Santa Catarina","Sergipe","São Paulo","Tocantins"],"n":[93,626,88,439,2838,1374,315,839,1709,1444,1278,718,3350,2651,840,1601,1632,1045,404,1717,1965,459,154,1420,446,4864,572],"taxa":[9.98638415579618,18.4595205714549,9.68428142081614,9.99553729997541,18.8138896623046,14.706341965478,9.94474510197626,20.0036860189017,23.1303591309698,19.9782784645503,35.0460562217719,24.787476731533,15.4843910405002,22.5595690484074,20.4917882817709,17.8978289966964,16.6757504547514,31.6425128818335,11.1840721095818,14.8703005801323,11.1368843237046,24.7908307412782,22.5222260734254,18.9224289682666,18.7675130141762,10.2760661798944,34.863890639533],"delta_prop":[-0.108841255836963,0.0807863739614003,-0.176141577905878,-0.0115303623919524,0.143935995727325,-0.0251948431135019,-0.100370190878118,0.0103864241685691,-0.0234034616779212,0.0729247165645882,0.0362716656919661,0.059573755172052,0.0514769033171201,-0.0309128752196556,-0.012930397034265,-0.0142318506825979,0.104736455635257,0.136032392876923,0.0233916709961915,-0.0271402997844942,0.0125316679670607,-0.042999821850549,-0.0384773946779229,-0.0116020368164734,0.0899210070282076,-0.00361320319203506,0.0314269306118139]},"columns":[{"id":"nome_uf_ocor","name":"UF","type":"character","na":"NA","minWidth":125,"style":"function(rowInfo, colInfo) {\nconst rowIndex = rowInfo.index + 1\nif (colInfo.id === 'taxa' & rowIndex === 1) {\n  return { backgroundColor: '#FFF4E8', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 2) {\n  return { backgroundColor: '#FEB678', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 3) {\n  return { backgroundColor: '#FFF5EB', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 4) {\n  return { backgroundColor: '#FFF4E8', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 5) {\n  return { backgroundColor: '#FDB272', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 6) {\n  return { backgroundColor: '#FED9B4', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 7) {\n  return { backgroundColor: '#FFF4E9', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 8) {\n  return { backgroundColor: '#FDA65F', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 9) {\n  return { backgroundColor: '#FA8533', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 10) {\n  return { backgroundColor: '#FDA660', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 11) {\n  return { backgroundColor: '#7F2704', color: '#FFFFFF' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 12) {\n  return { backgroundColor: '#F4721E', color: '#FFFFFF' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 13) {\n  return { backgroundColor: '#FDD4A9', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 14) {\n  return { backgroundColor: '#FC8B3A', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 15) {\n  return { backgroundColor: '#FEA158', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 16) {\n  return { backgroundColor: '#FEBC81', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 17) {\n  return { backgroundColor: '#FEC997', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 18) {\n  return { backgroundColor: '#AA3703', color: '#FFFFFF' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 19) {\n  return { backgroundColor: '#FFEEDD', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 20) {\n  return { backgroundColor: '#FED8B2', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 21) {\n  return { backgroundColor: '#FFEEDE', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 22) {\n  return { backgroundColor: '#F4721E', color: '#FFFFFF' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 23) {\n  return { backgroundColor: '#FC8B3A', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 24) {\n  return { backgroundColor: '#FDB170', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 25) {\n  return { backgroundColor: '#FDB372', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 26) {\n  return { backgroundColor: '#FFF2E6', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 27) {\n  return { backgroundColor: '#812804', color: '#FFFFFF' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 1) {\n  return { backgroundColor: '#5CA1CB', color: '#FFFFFF' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 2) {\n  return { backgroundColor: '#F3A481', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 3) {\n  return { backgroundColor: '#164F8D', color: '#FFFFFF' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 4) {\n  return { backgroundColor: '#ECF2F5', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 5) {\n  return { backgroundColor: '#C13A38', color: '#FFFFFF' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 6) {\n  return { backgroundColor: '#DFECF3', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 7) {\n  return { backgroundColor: '#6DABD0', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 8) {\n  return { backgroundColor: '#F9F0EA', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 9) {\n  return { backgroundColor: '#E1ECF3', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 10) {\n  return { backgroundColor: '#F6AF8E', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 11) {\n  return { backgroundColor: '#FDDECB', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 12) {\n  return { backgroundColor: '#FAC1A5', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 13) {\n  return { backgroundColor: '#FBCBB3', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 14) {\n  return { backgroundColor: '#DAE9F2', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 15) {\n  return { backgroundColor: '#EBF1F5', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 16) {\n  return { backgroundColor: '#EAF1F5', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 17) {\n  return { backgroundColor: '#E27B61', color: '#FFFFFF' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 18) {\n  return { backgroundColor: '#C8473F', color: '#FFFFFF' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 19) {\n  return { backgroundColor: '#FBE7DB', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 20) {\n  return { backgroundColor: '#DDEBF2', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 21) {\n  return { backgroundColor: '#FAEEE8', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 22) {\n  return { backgroundColor: '#CCE3EF', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 23) {\n  return { backgroundColor: '#D2E6F0', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 24) {\n  return { backgroundColor: '#ECF2F5', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 25) {\n  return { backgroundColor: '#ED9474', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 26) {\n  return { backgroundColor: '#F4F5F6', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 27) {\n  return { backgroundColor: '#FCE1D1', color: '#000000' }\n}\n\n}","html":true,"align":"left"},{"id":"n","name":"Óbitos","type":"numeric","na":"NA","minWidth":125,"style":"function(rowInfo, colInfo) {\nconst rowIndex = rowInfo.index + 1\nif (colInfo.id === 'taxa' & rowIndex === 1) {\n  return { backgroundColor: '#FFF4E8', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 2) {\n  return { backgroundColor: '#FEB678', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 3) {\n  return { backgroundColor: '#FFF5EB', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 4) {\n  return { backgroundColor: '#FFF4E8', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 5) {\n  return { backgroundColor: '#FDB272', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 6) {\n  return { backgroundColor: '#FED9B4', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 7) {\n  return { backgroundColor: '#FFF4E9', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 8) {\n  return { backgroundColor: '#FDA65F', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 9) {\n  return { backgroundColor: '#FA8533', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 10) {\n  return { backgroundColor: '#FDA660', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 11) {\n  return { backgroundColor: '#7F2704', color: '#FFFFFF' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 12) {\n  return { backgroundColor: '#F4721E', color: '#FFFFFF' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 13) {\n  return { backgroundColor: '#FDD4A9', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 14) {\n  return { backgroundColor: '#FC8B3A', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 15) {\n  return { backgroundColor: '#FEA158', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 16) {\n  return { backgroundColor: '#FEBC81', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 17) {\n  return { backgroundColor: '#FEC997', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 18) {\n  return { backgroundColor: '#AA3703', color: '#FFFFFF' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 19) {\n  return { backgroundColor: '#FFEEDD', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 20) {\n  return { backgroundColor: '#FED8B2', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 21) {\n  return { backgroundColor: '#FFEEDE', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 22) {\n  return { backgroundColor: '#F4721E', color: '#FFFFFF' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 23) {\n  return { backgroundColor: '#FC8B3A', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 24) {\n  return { backgroundColor: '#FDB170', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 25) {\n  return { backgroundColor: '#FDB372', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 26) {\n  return { backgroundColor: '#FFF2E6', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 27) {\n  return { backgroundColor: '#812804', color: '#FFFFFF' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 1) {\n  return { backgroundColor: '#5CA1CB', color: '#FFFFFF' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 2) {\n  return { backgroundColor: '#F3A481', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 3) {\n  return { backgroundColor: '#164F8D', color: '#FFFFFF' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 4) {\n  return { backgroundColor: '#ECF2F5', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 5) {\n  return { backgroundColor: '#C13A38', color: '#FFFFFF' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 6) {\n  return { backgroundColor: '#DFECF3', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 7) {\n  return { backgroundColor: '#6DABD0', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 8) {\n  return { backgroundColor: '#F9F0EA', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 9) {\n  return { backgroundColor: '#E1ECF3', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 10) {\n  return { backgroundColor: '#F6AF8E', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 11) {\n  return { backgroundColor: '#FDDECB', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 12) {\n  return { backgroundColor: '#FAC1A5', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 13) {\n  return { backgroundColor: '#FBCBB3', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 14) {\n  return { backgroundColor: '#DAE9F2', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 15) {\n  return { backgroundColor: '#EBF1F5', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 16) {\n  return { backgroundColor: '#EAF1F5', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 17) {\n  return { backgroundColor: '#E27B61', color: '#FFFFFF' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 18) {\n  return { backgroundColor: '#C8473F', color: '#FFFFFF' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 19) {\n  return { backgroundColor: '#FBE7DB', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 20) {\n  return { backgroundColor: '#DDEBF2', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 21) {\n  return { backgroundColor: '#FAEEE8', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 22) {\n  return { backgroundColor: '#CCE3EF', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 23) {\n  return { backgroundColor: '#D2E6F0', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 24) {\n  return { backgroundColor: '#ECF2F5', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 25) {\n  return { backgroundColor: '#ED9474', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 26) {\n  return { backgroundColor: '#F4F5F6', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 27) {\n  return { backgroundColor: '#FCE1D1', color: '#000000' }\n}\n\n}","html":true,"align":"right"},{"id":"taxa","name":"Taxa por 100 mil hab.","type":"numeric","na":"NA","minWidth":125,"style":"function(rowInfo, colInfo) {\nconst rowIndex = rowInfo.index + 1\nif (colInfo.id === 'taxa' & rowIndex === 1) {\n  return { backgroundColor: '#FFF4E8', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 2) {\n  return { backgroundColor: '#FEB678', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 3) {\n  return { backgroundColor: '#FFF5EB', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 4) {\n  return { backgroundColor: '#FFF4E8', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 5) {\n  return { backgroundColor: '#FDB272', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 6) {\n  return { backgroundColor: '#FED9B4', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 7) {\n  return { backgroundColor: '#FFF4E9', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 8) {\n  return { backgroundColor: '#FDA65F', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 9) {\n  return { backgroundColor: '#FA8533', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 10) {\n  return { backgroundColor: '#FDA660', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 11) {\n  return { backgroundColor: '#7F2704', color: '#FFFFFF' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 12) {\n  return { backgroundColor: '#F4721E', color: '#FFFFFF' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 13) {\n  return { backgroundColor: '#FDD4A9', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 14) {\n  return { backgroundColor: '#FC8B3A', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 15) {\n  return { backgroundColor: '#FEA158', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 16) {\n  return { backgroundColor: '#FEBC81', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 17) {\n  return { backgroundColor: '#FEC997', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 18) {\n  return { backgroundColor: '#AA3703', color: '#FFFFFF' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 19) {\n  return { backgroundColor: '#FFEEDD', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 20) {\n  return { backgroundColor: '#FED8B2', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 21) {\n  return { backgroundColor: '#FFEEDE', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 22) {\n  return { backgroundColor: '#F4721E', color: '#FFFFFF' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 23) {\n  return { backgroundColor: '#FC8B3A', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 24) {\n  return { backgroundColor: '#FDB170', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 25) {\n  return { backgroundColor: '#FDB372', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 26) {\n  return { backgroundColor: '#FFF2E6', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 27) {\n  return { backgroundColor: '#812804', color: '#FFFFFF' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 1) {\n  return { backgroundColor: '#5CA1CB', color: '#FFFFFF' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 2) {\n  return { backgroundColor: '#F3A481', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 3) {\n  return { backgroundColor: '#164F8D', color: '#FFFFFF' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 4) {\n  return { backgroundColor: '#ECF2F5', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 5) {\n  return { backgroundColor: '#C13A38', color: '#FFFFFF' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 6) {\n  return { backgroundColor: '#DFECF3', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 7) {\n  return { backgroundColor: '#6DABD0', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 8) {\n  return { backgroundColor: '#F9F0EA', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 9) {\n  return { backgroundColor: '#E1ECF3', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 10) {\n  return { backgroundColor: '#F6AF8E', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 11) {\n  return { backgroundColor: '#FDDECB', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 12) {\n  return { backgroundColor: '#FAC1A5', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 13) {\n  return { backgroundColor: '#FBCBB3', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 14) {\n  return { backgroundColor: '#DAE9F2', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 15) {\n  return { backgroundColor: '#EBF1F5', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 16) {\n  return { backgroundColor: '#EAF1F5', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 17) {\n  return { backgroundColor: '#E27B61', color: '#FFFFFF' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 18) {\n  return { backgroundColor: '#C8473F', color: '#FFFFFF' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 19) {\n  return { backgroundColor: '#FBE7DB', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 20) {\n  return { backgroundColor: '#DDEBF2', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 21) {\n  return { backgroundColor: '#FAEEE8', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 22) {\n  return { backgroundColor: '#CCE3EF', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 23) {\n  return { backgroundColor: '#D2E6F0', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 24) {\n  return { backgroundColor: '#ECF2F5', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 25) {\n  return { backgroundColor: '#ED9474', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 26) {\n  return { backgroundColor: '#F4F5F6', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 27) {\n  return { backgroundColor: '#FCE1D1', color: '#000000' }\n}\n\n}","cell":["9.99","18.46","9.68","10.00","18.81","14.71","9.94","20.00","23.13","19.98","35.05","24.79","15.48","22.56","20.49","17.90","16.68","31.64","11.18","14.87","11.14","24.79","22.52","18.92","18.77","10.28","34.86"],"html":true,"align":"right"},{"id":"delta_prop","name":"Variação (2022-2023)","type":"numeric","na":"NA","minWidth":125,"style":"function(rowInfo, colInfo) {\nconst rowIndex = rowInfo.index + 1\nif (colInfo.id === 'taxa' & rowIndex === 1) {\n  return { backgroundColor: '#FFF4E8', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 2) {\n  return { backgroundColor: '#FEB678', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 3) {\n  return { backgroundColor: '#FFF5EB', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 4) {\n  return { backgroundColor: '#FFF4E8', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 5) {\n  return { backgroundColor: '#FDB272', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 6) {\n  return { backgroundColor: '#FED9B4', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 7) {\n  return { backgroundColor: '#FFF4E9', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 8) {\n  return { backgroundColor: '#FDA65F', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 9) {\n  return { backgroundColor: '#FA8533', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 10) {\n  return { backgroundColor: '#FDA660', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 11) {\n  return { backgroundColor: '#7F2704', color: '#FFFFFF' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 12) {\n  return { backgroundColor: '#F4721E', color: '#FFFFFF' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 13) {\n  return { backgroundColor: '#FDD4A9', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 14) {\n  return { backgroundColor: '#FC8B3A', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 15) {\n  return { backgroundColor: '#FEA158', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 16) {\n  return { backgroundColor: '#FEBC81', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 17) {\n  return { backgroundColor: '#FEC997', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 18) {\n  return { backgroundColor: '#AA3703', color: '#FFFFFF' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 19) {\n  return { backgroundColor: '#FFEEDD', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 20) {\n  return { backgroundColor: '#FED8B2', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 21) {\n  return { backgroundColor: '#FFEEDE', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 22) {\n  return { backgroundColor: '#F4721E', color: '#FFFFFF' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 23) {\n  return { backgroundColor: '#FC8B3A', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 24) {\n  return { backgroundColor: '#FDB170', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 25) {\n  return { backgroundColor: '#FDB372', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 26) {\n  return { backgroundColor: '#FFF2E6', color: '#000000' }\n}\n\nif (colInfo.id === 'taxa' & rowIndex === 27) {\n  return { backgroundColor: '#812804', color: '#FFFFFF' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 1) {\n  return { backgroundColor: '#5CA1CB', color: '#FFFFFF' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 2) {\n  return { backgroundColor: '#F3A481', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 3) {\n  return { backgroundColor: '#164F8D', color: '#FFFFFF' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 4) {\n  return { backgroundColor: '#ECF2F5', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 5) {\n  return { backgroundColor: '#C13A38', color: '#FFFFFF' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 6) {\n  return { backgroundColor: '#DFECF3', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 7) {\n  return { backgroundColor: '#6DABD0', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 8) {\n  return { backgroundColor: '#F9F0EA', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 9) {\n  return { backgroundColor: '#E1ECF3', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 10) {\n  return { backgroundColor: '#F6AF8E', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 11) {\n  return { backgroundColor: '#FDDECB', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 12) {\n  return { backgroundColor: '#FAC1A5', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 13) {\n  return { backgroundColor: '#FBCBB3', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 14) {\n  return { backgroundColor: '#DAE9F2', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 15) {\n  return { backgroundColor: '#EBF1F5', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 16) {\n  return { backgroundColor: '#EAF1F5', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 17) {\n  return { backgroundColor: '#E27B61', color: '#FFFFFF' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 18) {\n  return { backgroundColor: '#C8473F', color: '#FFFFFF' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 19) {\n  return { backgroundColor: '#FBE7DB', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 20) {\n  return { backgroundColor: '#DDEBF2', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 21) {\n  return { backgroundColor: '#FAEEE8', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 22) {\n  return { backgroundColor: '#CCE3EF', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 23) {\n  return { backgroundColor: '#D2E6F0', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 24) {\n  return { backgroundColor: '#ECF2F5', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 25) {\n  return { backgroundColor: '#ED9474', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 26) {\n  return { backgroundColor: '#F4F5F6', color: '#000000' }\n}\n\nif (colInfo.id === 'delta_prop' & rowIndex === 27) {\n  return { backgroundColor: '#FCE1D1', color: '#000000' }\n}\n\n}","cell":["−10.88%","8.08%","−17.61%","−1.15%","14.39%","−2.52%","−10.04%","1.04%","−2.34%","7.29%","3.63%","5.96%","5.15%","−3.09%","−1.29%","−1.42%","10.47%","13.60%","2.34%","−2.71%","1.25%","−4.30%","−3.85%","−1.16%","8.99%","−0.36%","3.14%"],"html":true,"align":"right"}],"pagination":false,"defaultPageSize":10,"showPageSizeOptions":false,"pageSizeOptions":[10,25,50,100],"paginationType":"numbers","showPagination":false,"showPageInfo":true,"minRows":1,"height":"auto","theme":{"color":"#333333","backgroundColor":"#FFFFFF","stripedColor":"rgba(128,128,128,0.05)","style":{"font-family":"'Roboto Mono', system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif","fontSize":"10pt"},"tableStyle":{"borderTopStyle":"solid","borderTopWidth":"2px","borderTopColor":"#D3D3D3"},"headerStyle":{"fontWeight":"normal","backgroundColor":"transparent","borderBottomStyle":"solid","borderBottomWidth":"2px","borderBottomColor":"#D3D3D3"},"groupHeaderStyle":{"fontWeight":"normal","backgroundColor":"transparent","borderBottomStyle":"solid","borderBottomWidth":"2px","borderBottomColor":"#D3D3D3"},"cellStyle":{"fontWeight":"normal"}},"elementId":"nzuvewjgsc","dataKey":"3d8af21e044466c581e9653b1637670a"},"children":[]},"class":"reactR_markup"},"evals":["tag.attribs.columns.0.style","tag.attribs.columns.1.style","tag.attribs.columns.2.style","tag.attribs.columns.3.style"],"jsHooks":[]}</script>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-tbl margin-caption" id="tbl-taxas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Tabela&nbsp;1: Taxas de óbitos por 100 mil hab. em 2023
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>uf <span class="ot">&lt;-</span> <span class="fu">read_state</span>(<span class="at">year =</span> <span class="dv">2020</span>, <span class="at">simplified =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>sf_delta <span class="ot">&lt;-</span> uf <span class="sc">|&gt;</span> </span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">mutate</span>(</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">name_state =</span> <span class="fu">case_match</span>(</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>            name_state,</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Amazônas"</span> <span class="sc">~</span> <span class="st">"Amazonas"</span>,</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Rio De Janeiro"</span> <span class="sc">~</span> <span class="st">"Rio de Janeiro"</span>,</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Rio Grande Do Norte"</span> <span class="sc">~</span> <span class="st">"Rio Grande do Norte"</span>,</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Rio Grande Do Sul"</span> <span class="sc">~</span> <span class="st">"Rio Grande do Sul"</span>,</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>            <span class="st">"Mato Grosso Do Sul"</span> <span class="sc">~</span> <span class="st">"Mato Grosso do Sul"</span>,</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>            <span class="at">.default =</span> name_state</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">|&gt;</span> </span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>    <span class="fu">left_join</span>(taxas, <span class="at">by =</span> <span class="fu">c</span>(<span class="st">"name_state"</span> <span class="ot">=</span> <span class="st">"nome_uf_ocor"</span>))</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>legend_size <span class="ot">&lt;-</span> <span class="dv">1</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>obitos_map <span class="ot">&lt;-</span> <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_sf</span>(</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>        <span class="at">data =</span> sf_delta,</span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>        <span class="fu">aes</span>(<span class="at">fill =</span> taxa)</span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_fill_distiller</span>(<span class="at">palette =</span> <span class="st">"Oranges"</span>, <span class="at">direction =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">fill =</span> <span class="st">"Óbitos / 100 mil hab."</span>) <span class="sc">+</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.position =</span> <span class="st">"top"</span>,</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.direction =</span> <span class="st">"horizontal"</span>,</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.key.width =</span> <span class="fu">unit</span>(legend_size, <span class="st">"cm"</span>)</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>delta_map <span class="ot">&lt;-</span> <span class="fu">ggplot</span>() <span class="sc">+</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a>    <span class="fu">geom_sf</span>(</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>        <span class="at">data =</span> sf_delta,</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>        <span class="fu">aes</span>(<span class="at">fill =</span> delta_prop)</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a>    <span class="fu">scale_fill_distiller</span>(</span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>        <span class="at">palette =</span> <span class="st">"RdBu"</span>,</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>        <span class="at">limits =</span> <span class="fu">c</span>(<span class="sc">-</span><span class="fl">0.2</span>, <span class="fl">0.2</span>),</span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>        <span class="at">labels =</span> scales<span class="sc">::</span>percent</span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a>    ) <span class="sc">+</span></span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>    <span class="fu">labs</span>(<span class="at">fill =</span> <span class="st">"Variação (2022-2023)"</span>) <span class="sc">+</span></span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>    <span class="fu">theme</span>(</span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.position =</span> <span class="st">"top"</span>,</span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.direction =</span> <span class="st">"horizontal"</span>,</span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a>        <span class="at">legend.key.width =</span> <span class="fu">unit</span>(legend_size, <span class="st">"cm"</span>)</span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copiar para a área de transferência" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="tabset-margin-container"></div><div class="panel-tabset page-columns page-full">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">Taxas</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Variações</a></li></ul>
+<div class="tab-content page-columns page-full">
+<div id="tabset-1-1" class="tab-pane active page-columns page-full" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="cell page-columns page-full">
+<div class="cell-output-display page-columns page-full">
+<div id="fig-taxas" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-taxas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="obitos_files/figure-html/fig-taxas-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-taxas-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;1: Taxa de óbitos por 100 mil hab. em 2023
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane page-columns page-full" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="cell page-columns page-full">
+<div class="cell-output-display page-columns page-full">
+<div id="fig-delta" class="quarto-float quarto-figure quarto-figure-center anchored page-columns page-full">
+<figure class="quarto-float quarto-float-fig figure page-columns page-full">
+<div aria-describedby="fig-delta-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="obitos_files/figure-html/fig-delta-1.png" class="img-fluid figure-img" width="672">
+</div>
+<figcaption class="quarto-float-caption-margin quarto-float-caption quarto-float-fig margin-caption" id="fig-delta-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figura&nbsp;2: Variação nas taxas entre 2022 e 2023
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="conclusão" class="level1">
+<h1>Conclusão</h1>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const onCopySuccess = function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copiada");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copiada");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
+  });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp('/' + window.location.host + '/');
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+<footer class="footer">
+  <div class="nav-footer">
+    <div class="nav-footer-left">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+ Licenciado sob CC BY-NC 4.0, pabsantos (2024)
+  </li>  
+</ul>
+    </div>   
+    <div class="nav-footer-center">
+      &nbsp;
+    </div>
+    <div class="nav-footer-right">
+      <ul class="footer-items list-unstyled">
+    <li class="nav-item">
+ Desenvolvido com Quarto
+  </li>  
+</ul>
+    </div>
+  </div>
+</footer>
+
+
+
+
+</body></html>

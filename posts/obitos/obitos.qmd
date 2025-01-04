@@ -1,0 +1,208 @@
+---
+title: "Óbitos no trânsito brasileiro em 2023"
+subtitle: "Dados consolidados do DATASUS"
+date: 2025-01-06
+author: Pedro Borges
+cap-location: margin
+execute:
+    warning: false
+    freeze: auto
+---
+
+# Introdução
+
+# Nova versão do {roadtrafficdeaths}
+
+# Variação nas unidades da federação
+
+```{r}
+#| label: setup
+
+library(tidyverse)
+library(geobr)
+library(roadtrafficdeaths)
+library(showtext)
+library(patchwork)
+library(here)
+library(gt)
+
+font_add_google("Roboto Mono", "roboto")
+showtext_auto()
+theme_set(theme_bw(base_family = "roboto", base_size = 8))
+```
+
+```{r}
+#| label: obitos
+
+obitos <- rtdeaths |> 
+    filter(ano_ocorrencia %in% c(2022, 2023)) |> 
+    count(ano_ocorrencia, nome_uf_ocor) |> 
+    drop_na()
+    
+```
+
+```{r}
+#| label: populacao
+
+path <- "ibge_cnv_projpopuf092116201_75_182_5.csv"
+
+populacao <- read_csv2(
+    path, 
+    locale = locale(encoding = "latin1"), 
+    skip = 3, 
+    n_max = 27
+)
+
+populacao_fixed <- populacao |>
+    janitor::clean_names() |> 
+    pivot_longer(
+        cols = -unidade_da_federacao,
+        names_to = "ano",
+        values_to = "hab"
+    ) |> 
+    mutate(ano = str_sub(ano, 2, -1) |> as.numeric()) |> 
+    tidyr::separate(
+        unidade_da_federacao,
+        into = c("cod_uf", "uf"),
+        sep = " ",
+        extra = "merge"
+    )
+```
+
+```{r}
+#| label: taxas
+
+taxas <- obitos |> 
+    left_join(
+        populacao_fixed,
+        by = c("ano_ocorrencia" = "ano", "nome_uf_ocor" = "uf")
+    ) |> 
+    mutate(
+        taxa = n / hab * 100000
+    ) |> 
+    group_by(nome_uf_ocor) |> 
+    mutate(
+        delta = taxa - lag(taxa),
+        delta_prop = delta / lag(taxa)
+    ) |> 
+    filter(ano_ocorrencia == 2023) |> 
+    ungroup()
+
+```
+
+```{r}
+#| label: tbl-taxas
+#| tbl-cap: "Taxas de óbitos por 100 mil hab. em 2023"
+
+taxas |> 
+    select(nome_uf_ocor, n, taxa, delta_prop) |> 
+    gt() |> 
+    cols_label(
+        nome_uf_ocor = "UF",
+        n = "Óbitos",
+        taxa = "Taxa por 100 mil hab.",
+        delta_prop = "Variação (2022-2023)"
+    ) |> 
+    fmt_number(taxa) |> 
+    fmt_percent(delta_prop) |> 
+    data_color(
+        columns = taxa,
+        palette = "Oranges"
+    ) |> 
+    data_color(
+        columns = delta_prop,
+        palette = "RdBu",
+        reverse = TRUE,
+        domain = c(-0.2, 0.2)
+    ) |> 
+    opt_interactive(use_pagination = FALSE) |> 
+    opt_table_font(
+        font = google_font("Roboto Mono")
+    ) |> 
+    tab_options(table.font.size = "10pt")
+```
+
+
+```{r}
+#| label: sfuf
+
+uf <- read_state(year = 2020, simplified = TRUE)
+
+sf_delta <- uf |> 
+    mutate(
+        name_state = case_match(
+            name_state,
+            "Amazônas" ~ "Amazonas",
+            "Rio De Janeiro" ~ "Rio de Janeiro",
+            "Rio Grande Do Norte" ~ "Rio Grande do Norte",
+            "Rio Grande Do Sul" ~ "Rio Grande do Sul",
+            "Mato Grosso Do Sul" ~ "Mato Grosso do Sul",
+            .default = name_state
+        )
+    ) |> 
+    left_join(taxas, by = c("name_state" = "nome_uf_ocor"))
+```
+
+```{r}
+#| label: fig-mapas
+#| fig-cap: "Taxa de óbitos por 100 mil hab. em 2023 e variação"
+
+legend_size <- 1
+
+obitos_map <- ggplot() +
+    geom_sf(
+        data = sf_delta,
+        aes(fill = taxa)
+    ) +
+    scale_fill_distiller(palette = "Oranges", direction = 1) +
+    labs(fill = "Óbitos / 100 mil hab.") +
+    theme(
+        legend.position = "top",
+        legend.direction = "horizontal",
+        legend.key.width = unit(legend_size, "cm")
+    )
+
+delta_map <- ggplot() +
+    geom_sf(
+        data = sf_delta,
+        aes(fill = delta_prop)
+    ) +
+    scale_fill_distiller(
+        palette = "RdBu",
+        limits = c(-0.2, 0.2),
+        labels = scales::percent
+    ) +
+    labs(fill = "Variação (2022-2023)") +
+    theme(
+        legend.position = "top",
+        legend.direction = "horizontal",
+        legend.key.width = unit(legend_size, "cm")
+    )
+```
+
+::: {.panel-tabset}
+
+## Taxas
+
+```{r}
+#| echo: false
+#| label: fig-taxas
+#| fig-cap: Taxa de óbitos por 100 mil hab. em 2023
+
+obitos_map
+```
+
+## Variações
+
+```{r}
+#| echo: false
+#| label: fig-delta
+#| fig-cap: Variação nas taxas entre 2022 e 2023
+
+delta_map
+```
+
+:::
+
+
+# Conclusão

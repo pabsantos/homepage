@@ -2,6 +2,7 @@
   {
     "listing": "/blog.html",
     "items": [
+      "/posts/obitos/obitos.html",
       "/posts/cwbspeed/cwbspeed.html",
       "/posts/ndsbr/ndsbr.html",
       "/posts/rtdeaths/rtdeaths.html"
