@@ -144,9 +144,6 @@ sf_delta <- uf |>
 ```
 
 ```{r}
-#| label: fig-mapas
-#| fig-cap: "Taxa de óbitos por 100 mil hab. em 2023 e variação"
-
 legend_size <- 1
 
 obitos_map <- ggplot() +
@@ -188,6 +185,7 @@ delta_map <- ggplot() +
 #| echo: false
 #| label: fig-taxas
 #| fig-cap: Taxa de óbitos por 100 mil hab. em 2023
+#| fig-cap-location: top
 
 obitos_map
 ```
@@ -198,6 +196,7 @@ obitos_map
 #| echo: false
 #| label: fig-delta
 #| fig-cap: Variação nas taxas entre 2022 e 2023
+#| fig-cap-location: top
 
 delta_map
 ```
