@@ -53,9 +53,15 @@ Git | GitHub | Docker | QGIS | Power BI | DuckDB | Spark | Quarto | Shiny | Olla
 
 ## Experiência
 
+#### Chefe da Divisão de Estudos para Segurança no Trânsito
+
+01-2025 ~
+
+[*Detran.SP*](https://www.detran.sp.gov.br){target="_blank"}
+
 #### Consultor de Pesquisa
 
-09-2024 ~
+09-2024 a 01-2025
 
 [*Observatório Nacional de Segurança Viária*](https://onsv.org.br){target="_blank"}
 
