@@ -114,3 +114,20 @@ div.quarto-listing a:hover {
     color: white;
     transition: $transition-time;
 }
+
+.nav-item {
+  
+    .nav-link {
+        color: black;
+        text-decoration: none;
+  
+        &.active {
+            color: white;
+            background-color: black;
+        }
+  
+      &:hover {
+        color: white;
+      }
+    }
+  }
